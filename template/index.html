@@ -1,0 +1,325 @@
+<!DOCTYPE html public "٩๏̯͡๏)۶">
+
+<!--
+	Google HTML5 slide template
+
+	Authors: Luke Mahé (code)
+			 Marcin Wichary (code and design)
+		 
+			 Dominic Mazzoni (browser compatibility)
+			 Charles Chen (ChromeVox support)
+
+	URL: http://code.google.com/p/html5slides/
+	
+	Tips:
+			Display logo:
+			<article class="biglogo">
+			
+			For animated bullet points:
+			<ul class="build">
+			
+			Main header:
+			<h1>
+			
+			Segue header:
+			<h2>
+			
+			Slide header:
+			<h3>
+			
+			Smaller font-size:
+			<article class="smaller">
+			
+			Colors:
+			class="red|blue|green|yellow|black|white"
+			
+			Code block:
+			<pre>
+			
+			Attribution:
+			<div class="source">
+			
+			Fill slide with bg:
+			<article class="fill">
+				<h3>
+					Image filling the slide (with optional header)
+				</h3>
+				<p>
+					<img src="images/example-cat.jpg">
+				</p>
+				<div class="source white">
+					Source: Eric Schmidt
+				</div>
+			</article>
+			
+			Quote:
+			<article>
+				<q>
+					The best way to predict the future is to invent it.
+				</q>
+				<div class="author">
+					Alan Kay
+				</div>
+			</article>
+			
+			Embed an iframe:
+			<article class="fill">
+				<h3>
+					Full-slide embed with (optional) slide title on top
+				</h3>
+				<iframe src="http://www.google.com/doodle4google/history.html"></iframe>
+			</article>
+			
+-->
+
+<html>
+	<head>
+		<title>Presentation</title>
+
+		<meta charset="utf-8" />
+		<script src="../slides.js"></script>
+	</head>
+	
+	<style>
+		/* Your individual styles here, or just use inline styles if that’s
+			 what you want. */
+		
+	</style>
+
+	<body style="display: none">
+
+		<section class="slides layout-regular template-red">
+			
+			<!-- Your slides (<article>s) go here. Delete or comment out the
+					 slides below. -->
+				
+			<article class="biglogo">
+				<!-- RED Interactive -->
+			</article>
+
+			<article>
+				<h1>
+					Qu&rsquo;est-ce que HTML5?
+				</h1>
+				<p>
+					RED Interactive
+					<br />
+					TBD, 2011
+				</p>
+			</article>
+			<article>
+				<h3>Hey.</h3>
+				<p>This preso's about HTML5</p>
+			</article>
+			<article>
+				<h3>Stuff to talk about:</h3>
+				<ul class="build">
+					<li>What HTML5 is</li>
+					<li>How we want to use it</li>
+					<li>How we can start using it now</li>
+				</ul>
+			</article>
+			
+			<article>
+				<h1>So what&rsquo;s HTML5?</h1>
+			</article>
+			<article>
+				<h3>Basically, it&rsquo;s a ton of things.</h3>
+				<ul class="build">
+					<li>Audio/Video</li>
+					<li>Canvas/WebGL</li>
+					<li>Custom fonts</li>
+					<li>CSS 3D effects, transitions, animations</li>
+				</ul>
+			</article>
+			
+			<article class="smaller">
+				<h1>The Basics</h1>
+				<p>(Or, things we should've had access to years ago if it wasn't for IE, standards bodies that weren't progressing the spec, and clients who feel the need to have requirements that everything work in antiquated browsers that should have died out along with fax machines.)</p>
+			</article>
+			<article>
+				<h3>Rounded corners</h3>
+			</article>
+			<article>
+				<h3>Drop shadows</h3>
+			</article>
+			<article>
+				<h3>Text shadows</h3>
+			</article>
+			<article>
+				<h3>Gradients</h3>
+			</article>
+			<article>
+				<h3>Custom fonts</h3>
+			</article>
+			<article class="demo">
+				<h2>[DEMO] (Scott Twede)</h2>
+			</article>
+			
+			<article>
+				<h1>The Advanced</h1>
+			</article>
+			<article>
+				<h3>Responsive Web</h3>
+			</article>
+			<article class="demo">
+				<h2>[DEMO] (Felipe Arroyo)</h2>
+			</article>
+			<article>
+				<h3>CSS transitions</h3>
+			</article>
+			<article>
+				<h3>CSS animations</h3>
+			</article>
+			<article>
+				<h3>CSS 3D transforms</h3>
+			</article>
+			<article class="demo">
+				<h2>[DEMO] (Christine Cheung)</h2>
+			</article>
+			
+			<article>
+				<h1>The Cutting Edge</h1>
+			</article>
+			<article>
+				<h3>Canvas/WebGL</h3>
+			</article>
+			
+			<article>
+				<h1>The Under-the-hood Goods</h1>
+			</article>
+			
+			<article>
+				<h3>HTML5 endpoints</h3>
+				<ul>
+					<li>WebSockets</li>
+					<li>Flexbox</li>
+					<li>History API</li>
+					<li>Pointer Events</li>
+				</ul>
+			</article>
+			<article>
+				<h3>HTML5 libraries</h3>
+				<ul>
+					<li>Modernizr</li>
+					<li>jQuery</li>
+					<li>SASS + Compass</li>
+					<li>Flux Capacitors</li>
+				</ul>
+			</article>
+			
+			<article>
+				<h1>The Catch</h1>
+			</article>
+			<article>
+				<h3>Simply: Legacy browsers do not support these features.</h3>
+			</article>
+			<article>
+				<h3>Also: <em>This is completely fine.</em></h3>
+			</article>
+			<article>
+				<h3>Graceful degradation</h3>
+				<pre>Demo: Rounded corners, drop shadows</pre>
+			</article>
+			<article>
+				<h3>Do:</h3>
+				<ul class="build">
+					<li>Use advanced techniques</li>
+					<li>Degrade gracefully</li>
+					<li>Be okay with degradation</li>
+					<li>This means you, designer!</li>
+				</ul>
+			</article>
+			<article>
+				<h3>Don&rsquo;t:</h3>
+				<ul class="build">
+					<li>Worry (be happy)</li>
+					<li>Provide overly-complicated fallbacks</li>
+					<li>Over-emphasize this point. Make it status quo. We&rsquo;ll buy you beers.</li>
+				</ul>
+			</article>
+			<article>
+				<h3>The web evolves. We should too.</h3>
+			</article>
+			
+			<article>
+				<h1>The Goal</h1>
+			</article>
+			<article>
+				<h3>Eight months ago, we were here:</h3>
+				<pre>[Simple list of supported browsers]</pre>
+			</article>
+			<article>
+				<h3>We&rsquo;ve gotten better. We&rsquo;re currently running under these assumptions:</h3>
+				<pre>[Browser Support Chart]</pre>
+			</article>
+			<article>
+				<h3>But that&rsquo;s not where we want to be.</h3>
+			</article>
+			<article>
+				<h3>(Pause for dramatic effect&hellip;)</h3>
+			</article>
+			<article>
+				<h3>Instead of supporting <em>browsers</em>, let&rsquo;s support <em>features</em>:</h3>
+				<pre>http://www.w3.org/html/logo/#downloads, [Canvas] [WebGL] [CSS 3D] [Fonts] [Gradients] [Etc]</pre>
+			</article>
+			<article>
+				<h3>These browsers support our features:</h3>
+				<pre>[IE9] [Chrome] [Firefox] [Safari]</pre>
+			</article>
+			<article>
+				<h3>These don&rsquo;t:</h3>
+				<pre>[&lt;IE9]</pre>
+			</article>
+			<article>
+				<h3>Or rather, these <em>do</em> (what a twist!):</h3>
+				<pre>[&lt;IE9]</pre>
+				
+				<p>How?</p>
+			</article>
+			<article>
+				<h3>Google Chrome Frame</h3>
+				<ul>
+					<li><a href="http://google.com/chromeframe">http://google.com/chromeframe</a></li>
+					<li>It&rsquo;s a plugin. Y&rsquo;know, just like that <em>other</em> plugin</li>
+				</ul>
+			</article>
+			
+			<article>
+				<h1>The Part Where<br />You Come In</h1>
+			</article>
+			<article>
+				<h3>Usage is possible with creative support.</h3>
+				<ul>
+					<li>We suck at design.</li>
+					<li>No, seriously. Suckage.</li>
+				</ul>
+			</article>
+			<article>
+				<h2>You complete <strike>me</strike> us</h2>
+			</article>
+			<article>
+				<h2>Please use HTML5.</h2>
+			</article>
+			
+			<article>
+				<h3>
+					Thank you!  <img src="images/justabill.png" style="top: 0px; right: 0px; position: absolute; width: 345px;">
+				</h3>
+
+				<ul>
+					<li>Felipe Arroyo</li>
+					<li>Christine Cheung</li>
+					<li>Christian Harden</li>
+					<li>Richard Herrera</li>
+					<li>Taka Kojima</li>
+					<li>Scott Twede</li>
+					<li>Slides: <a href="#">ff0000.github.com/red-labs</a></li>
+				</ul>
+
+			</article>
+
+		</section>
+
+	</body>
+</html>
