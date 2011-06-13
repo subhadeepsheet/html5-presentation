@@ -1,0 +1,19 @@
+CACHE MANIFEST
+# version 1
+../pretify.js
+
+../fonts/DroidSansMono.ttf
+../fonts/OpenSans.ttf
+../fonts/OpenSansItalic.ttf
+../fonts/OpenSansSemibold.ttf
+../fonts/OpenSansSemiboldItalic.ttf
+
+../images/billsit.jpg
+../images/colorbar.png
+../images/red-logo.png
+../images/redbar.png
+
+NETWORK:
+*
+
+FALLBACK:
