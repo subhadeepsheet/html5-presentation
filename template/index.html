@@ -134,18 +134,134 @@
 				<q>HTML5 is being developed as the next major revision of HTML (HyperText Markup Language), the core markup language of the World Wide Web. The Web Hypertext Application Technology Working Group (WHATWG)&hellip;</q>
 				<div class="author">Wikipedia</div>
 			</article>
-			<article class="smaller">
-				<q>HTML5 is a buzzword like <em>AJAX</em> and <em>Web 2.0</em> that encapsulates the most exciting improvements to the web platform in the past and next few years.</q>
-				<div class="author">Some guy on the internet</div>
-			</article>
 			
 			<article class="smaller">
 				<h1>The Basics</h1>
 				<p>(Or, things we should've had access to years ago if it wasn't for IE, standards bodies that weren't progressing the spec, and clients who feel the need to have requirements that everything work in antiquated browsers that should have died out along with fax machines.)</p>
 			</article>
-			<article>
+			
+			<article id="rounded-corners">
+				<style>
+					#rounded-corners section > ul > li:before { 
+						content:"";
+					}
+					#rounded-corners section > ul > li a {	
+						display:inline-block;
+						margin-left:20px;
+						position:relative;
+						top:3px;
+						content:"\00a0";
+						color:#fff;
+						background:#000;
+						font-size:.8em;
+						padding:10px;
+					}
+					#rounded-corners section > ul > li a:hover {
+						color:yellow;
+					}
+					
+					#rounded-corners section > ul > li:nth-child(1) a {
+						-webkit-border-radius: 30px;
+					}
+					
+					#rounded-corners section > ul > li:nth-child(2) a {
+						width:30px;
+						height:30px;
+						-webkit-border-radius: 30px;
+					}
+					
+					#rounded-corners section > ul > li:nth-child(3) a {
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+						-webkit-border-radius: 10px;
+						background:#000;
+
+					}
+					#rounded-corners section > ul > li:nth-child(3) a:hover {
+						-webkit-border-radius: 40px;
+					}
+					
+					#rounded-corners .pagination li:before {
+						content:"";
+					}
+					#rounded-corners .pagination {
+						display:inline-block;
+						position:relative;
+						top:13px;
+					}
+					#rounded-corners .pagination li {
+						display:inline-block;
+						margin-left:10px;
+						content:"\00a0";
+						width:20px;
+						height:20px;
+						-webkit-border-radius:20px;
+						cursor:pointer;
+						background-color:#000;
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+					}
+					
+					#rounded-corners .pagination li:hover {
+						background-color:#ff0000;
+					}
+					
+					#rounded-corners #canon-example {
+						width:749px;
+						height:225px;
+						display:block;
+						margin-top:10px;
+						background:url(images/rounded-corners.jpg) no-repeat;
+					}
+					#rounded-corners #canon-example:hover {
+						background:url(images/rounded-corners-degrade.jpg) no-repeat;
+					}
+					
+				</style>
+				<!--//
+					Roudned Corners
+					 - Circles / Backings / Maskings
+					 - Degrade to squares, not so bad is it?
+					 - Masks with rounded corners
+				//-->
 				<h3>Rounded corners</h3>
+				<section>
+					<ul>
+						<li><a>Rounded Button</a></li>
+						<li>
+							Circles as Buttons
+							<ul class="pagination clearfix">
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</li>						
+						<li><a>Animate Corners!</a></li>
+						<li>Examples of Degredation
+							<span id="canon-example"></span>
+						</li>
+					</ul>
+				</section>
 			</article>
+			
+			<article id="rounded-corners-masks">
+				<style>
+					#rounded-corners-masks > ul  {
+						
+					}
+				</style>
+				
+				<h3>Design with Rounded Corners</h3>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</article>
+			
+			
 			<article>
 			    
 			    <style>
