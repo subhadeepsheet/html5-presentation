@@ -1,9 +1,9 @@
-<!DOCTYPE html public "Ù©à¹Ì¯Í¡à¹)Û¶">
+<!DOCTYPE html public "œô®ÉœôÃÏœô¥ïœô¦ÁœôÃÏ)œô¯ö">
 
 <!--
 	Google HTML5 slide template
 
-	Authors: Luke MahÃ© (code)
+	Authors: Luke Mahé (code)
 			 Marcin Wichary (code and design)
 		 
 			 Dominic Mazzoni (browser compatibility)
@@ -78,12 +78,11 @@
 
 		<meta charset="utf-8" />
 		<script src="../slides.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/gradients.css"></link>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 	</head>
 	
 	<style>
-		/* Your individual styles here, or just use inline styles if thatâ€™s
+		/* Your individual styles here, or just use inline styles if thatœôòùs
 			 what you want. */
 		
 	</style>
@@ -110,6 +109,10 @@
 				</p>
 			</article>
 			<article>
+				<h3>Hey.</h3>
+				<p>This preso's about HTML5</p>
+			</article>
+			<article>
 				<h3>Stuff to talk about:</h3>
 				<ul class="build">
 					<li>What HTML5 is</li>
@@ -130,10 +133,6 @@
 			<article class="smaller">
 				<q>HTML5 is being developed as the next major revision of HTML (HyperText Markup Language), the core markup language of the World Wide Web. The Web Hypertext Application Technology Working Group (WHATWG)&hellip;</q>
 				<div class="author">Wikipedia</div>
-			</article>
-			<article class="smaller">
-				<q>HTML5 is a buzzword like <em>AJAX</em> and <em>Web 2.0</em> that encapsulates the most exciting improvements to the web platform in the past and next few years.</q>
-				<div class="author">Some guy on the internet</div>
 			</article>
 			
 			<article class="smaller">
@@ -240,7 +239,7 @@
 							</ul>
 						</li>						
 						<li><a>Animate Corners!</a></li>
-						<li>Examples of Degradation
+						<li>Examples of Degredation
 							<span id="canon-example"></span>
 						</li>
 					</ul>
@@ -311,6 +310,9 @@
 				
 			</article>
 			<article>
+				<h3>Text shadows</h3>
+			</article>
+			<article>
 				<h3>Gradients</h3>
 				<ul class="gradientsList">
 					<li class="gradient1"></li>
@@ -319,11 +321,10 @@
 					<li class="gradient4"></li>
 					<li class="gradient5"></li>
 					<li class="gradient6"></li>
+					<li class="gradient7"></li>
+					<li class="gradient8"></li>
+					<li class="gradient9"></li> 
 				</ul>
-
-				<div class="gradientText"></div>
-				<div class="textGradient"></div>
-				
 			</article>
 			<article>
 				<link rel="stylesheet" href="../webfonts.css" />
@@ -338,11 +339,11 @@
 					</li>
 				</ul>
 				<!--//
-				Many years ago, before the advent of desktop publishing, if you wanted words set in a particular typeface, you had to go to a typesetter. A typesetter, or compositor, as they were sometimes called, was a person whose job it was to take the written word (in the form of a document or manuscript) and â€˜setâ€™ the type in the desired typeface. The designer would choose what typeface they wanted â€“ and all the ligatures, underlines, italics and whatnot â€“ and then scribble all over the manuscript so the typesetter could set the correct type.
+				Many years ago, before the advent of desktop publishing, if you wanted words set in a particular typeface, you had to go to a typesetter. A typesetter, or compositor, as they were sometimes called, was a person whose job it was to take the written word (in the form of a document or manuscript) and œôòøsetœôòù the type in the desired typeface. The designer would choose what typeface they wanted œôòó and all the ligatures, underlines, italics and whatnot œôòó and then scribble all over the manuscript so the typesetter could set the correct type.
 
-				Then along came Desktop Publishing and every Tom, Dick and Harry could choose type on their computer and an entire link in the typographic chain was removed within just a few years. Well, thatâ€™s progress I guess. That was until recently when typesetting was reborn on the web in the guise of a new CSS property, but letâ€™s not get ahead of ourselvesâ€¦
+				Then along came Desktop Publishing and every Tom, Dick and Harry could choose type on their computer and an entire link in the typographic chain was removed within just a few years. Well, thatœôòùs progress I guess. That was until recently when typesetting was reborn on the web in the guise of a new CSS property, but letœôòùs not get ahead of ourselvesœôó¦
 
-				Setting type on the web has historically been limited to a small subset of â€œweb safeâ€ fonts commonly installed on usersâ€™ systems. Typographical variety came only from a few Serifs (e.g. Times, Georgia), Sans-serifs (e.g. Helvetica, Verdana) or Monospace fonts (e.g. Monaco, Courier). Expecting users to have any fonts installed outside of these usual suspects is a total shot in the dark. If a designer wanted to use another typeface, that typically meant either asset preparation in Photoshop, or embedding the font in a Flash movie; rendering text in a SWF wrapper. Either method adds unnecessary overhead â€” we can do better!
+				Setting type on the web has historically been limited to a small subset of œôòüweb safeœôòý fonts commonly installed on usersœôòù systems. Typographical variety came only from a few Serifs (e.g. Times, Georgia), Sans-serifs (e.g. Helvetica, Verdana) or Monospace fonts (e.g. Monaco, Courier). Expecting users to have any fonts installed outside of these usual suspects is a total shot in the dark. If a designer wanted to use another typeface, that typically meant either asset preparation in Photoshop, or embedding the font in a Flash movie; rendering text in a SWF wrapper. Either method adds unnecessary overhead œôòô we can do better!
 
 				Enter @font-face.
 
@@ -352,15 +353,15 @@
 
 				Not all fonts are created equal. There are a handful of different formats in circulation, and every major browser supports a different subset.
 
-				Safari supports OTF, TTF, and SVG fonts. Chrome supports TTF and SVG. Firefox supports OTF and TTF. Internet Explorer only supports EOT. Mobile browsers like Safari on the iPad and iPhone require SVG. Thereâ€™s even yet another, called Web Open Font Format, or WOFF, which looks to become the standard for future font embedding.
+				Safari supports OTF, TTF, and SVG fonts. Chrome supports TTF and SVG. Firefox supports OTF and TTF. Internet Explorer only supports EOT. Mobile browsers like Safari on the iPad and iPhone require SVG. Thereœôòùs even yet another, called Web Open Font Format, or WOFF, which looks to become the standard for future font embedding.
 
 				Confused yet? You should be. Fortunately, there are brilliant developers that have worked this all out for you.
 
-				It seems that just to cover your bases for all the browsers in use today, youâ€™d need a half-dozen fonts. Well, sort ofâ€¦ Font Squirrel Generator [http://www.fontsquirrel.com/fontface/generator] is a free online tool used to create the required font permutations for cross-browser use. Simply upload any font, agree to the terms, and with a little luck, youâ€™ll receive to a ZIP file containing everything necessary for typographic bliss.
+				It seems that just to cover your bases for all the browsers in use today, youœôòùd need a half-dozen fonts. Well, sort ofœôó¦ Font Squirrel Generator [http://www.fontsquirrel.com/fontface/generator] is a free online tool used to create the required font permutations for cross-browser use. Simply upload any font, agree to the terms, and with a little luck, youœôòùll receive to a ZIP file containing everything necessary for typographic bliss.
 
-				That is, you would if this were strictly a discussion of whatâ€™s technically possible.
+				That is, you would if this were strictly a discussion of whatœôòùs technically possible.
 
-				Like most software, for any font you want to use on a computer or website, you need a license. Unfortunately, not every type foundry agrees on the licensing & usage of their typefaces as web fonts. While many allow for embedding with @font-face, others explicitly forbid it â€” like Hoefler & Frere-Jones, creators of the popular Gotham family of typefaces.
+				Like most software, for any font you want to use on a computer or website, you need a license. Unfortunately, not every type foundry agrees on the licensing & usage of their typefaces as web fonts. While many allow for embedding with @font-face, others explicitly forbid it œôòô like Hoefler & Frere-Jones, creators of the popular Gotham family of typefaces.
 
 				The good news is, services like Typekit [http://typekit.com], Fontdeck [http://fontdeck.com], and Google Fonts [http://www.google.com/webfonts] have already negotiated font licensing & hosting arrangements with various type foundries. In fact, some foundries exclusively permit Typekit to host their wares.
 
@@ -411,6 +412,15 @@
 			<article class="demo">
 				<h2>[DEMO] (Felipe Arroyo)</h2>
 			</article>
+			<article>
+				<h3>CSS transitions</h3>
+			</article>
+			<article>
+				<h3>CSS animations</h3>
+			</article>
+			<article>
+				<h3>CSS 3D transforms</h3>
+			</article>
 
             <article>
 				<h2>A Simple Animated Scene in CSS3</h2>
@@ -444,6 +454,8 @@
         		</div><!-- #sky --> 
 
         		<input type="button" value="ANIMATE THE SCENE" id="startbutton"> 
+				
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
 				
 				<script> 
                 $(function () {
@@ -511,14 +523,6 @@
                 </script>
 				
 			</article>
-			<article>
-				<h3>CSS transitions, animations &amp; 3d transforms</h3>
-				
-				<ul>
-					<li><a target="_blank" href="demo/carousel/cube-transition.html">Star Cube</a></li>
-					<li><a target="_blank" href="demo/carousel/3d-carousel-transition.html">War Carousel</a></li>
-				</ul>
-			</article>
 			
 			<article>
 				<h1>The Cutting Edge</h1>
@@ -577,9 +581,7 @@
 			</article>
 			<article>
 				<h3>Graceful degradation</h3>
-				
-				<p>While we don't support all browser versions (such as IE 6), graceful degradation allows us to take advantage of features and functionality in newer browsers, while not excluding older browsers in support. Our sites will look awesome in the latest/most standard-compliants browsers, and will still look good in older browsers. The quality of the site will degrade proportionally to how old/out-dated the browser is.</p>
-				
+				<pre>Demo: Rounded corners, drop shadows</pre>
 			</article>
 			<article>
 				<h3>Do:</h3>
