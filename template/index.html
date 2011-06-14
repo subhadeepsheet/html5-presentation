@@ -235,8 +235,107 @@
 			<article>
 				<h3>CSS 3D transforms</h3>
 			</article>
+
+            <article>
+				<h2>A Simple Animated Scene in CSS3</h2>
+			</article>
+
 			<article class="demo">
-				<h2>[DEMO] (Christine Cheung)</h2>
+			    
+			    <style>
+    			    @import url("../css/simple-animated-scene.css");
+                </style>
+
+				<div id="sky" class="target">
+
+        			<div id="cloud" class="target"> 
+        				<div class="cloud cloud-1"></div> 
+        				<div class="cloud cloud-2"></div> 
+        				<div class="cloud cloud-3"></div> 
+        			</div> 
+
+        			<div id="sun" class="target"></div> 
+
+        			<div id="moon" class="target"> 
+        				<div class="moon"> 
+        				</div> 
+        				<div class="moon moon-2">
+        				</div> 
+        			</div> 
+
+        			<div id="ground" class="target"></div> 
+
+        		</div><!-- #sky --> 
+
+        		<input type="button" value="ANIMATE THE SCENE" id="startbutton"> 
+				
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
+				
+				<script> 
+                $(function () {
+                	var s = null,
+
+                	AnimationSpace = {
+                		settings: {
+                			tabHeaders: null,
+                			tabSections: null,
+                			currentIndex: null,
+                			speed: 800,
+                			collection: null,
+                			i: null,
+                			j: null,
+                			startButton: $("#startbutton")
+                		},
+
+                		init: function () {
+                			s = this.settings;
+                			s.tabSections = $("div.tab");
+                			$(s.tabSections[0]).slideDown(s.speed);
+                			$(s.tabSections[1]).slideUp(s.speed);
+                			$(s.tabSections[2]).slideUp(s.speed);
+                			$(s.tabSections[3]).slideUp(s.speed);
+                			$(s.tabSections[4]).slideUp(s.speed);
+                			this.getClickedTab();
+                			this.startAnimation();
+                		},
+
+                		getClickedTab: function () {
+                			s = this.settings;
+                			s.tabHeaders = $("#sidebar_tabs ul.headers a");
+                			s.collection = $("#tab_content div.tab");
+                			$(s.tabHeaders).click(function () {
+                				s.currentIndex = $(this).parent().index();
+                				for (s.i = 0, s.j = s.collection.length; s.i < s.j; s.i += 1) {
+                					if (s.i !== s.currentIndex) {
+                						$(s.tabSections[s.i]).slideUp(s.speed);
+
+                					} else {
+                						$(s.tabSections[s.i]).slideDown(s.speed);
+                					}
+                				}
+                				return false;
+                			});
+                		},
+
+                		startAnimation: function () {
+                			s = this.settings;
+
+                			s.startButton.click(function() {
+                				$("div.target").toggleClass("animate");
+                				if (s.startButton.attr("value") === "ANIMATE THE SCENE") {
+                					s.startButton.attr("value", "RESET THE ANIMATION");
+                				} else {
+                					s.startButton.attr("value", "ANIMATE THE SCENE");	
+                				}
+                			});
+                		}
+
+                	};
+
+                	AnimationSpace.init();
+                });
+                </script>
+				
 			</article>
 			
 			<article>
