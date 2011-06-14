@@ -2,6 +2,8 @@
 ul.gradientsList{
 	list-style: none;
 	margin: 30px 0px 0px 0px;
+	float: left;
+	clear: both;
 }
 
 
@@ -130,53 +132,22 @@ ul.gradientsList li:before{
 	);
 }
 
-.gradient7{
-	background-image: -webkit-gradient(
-	    linear,
-	    right bottom,
-	    left top,
-	    color-stop(0.33, rgb(161,194,29)),
-	    color-stop(1, rgb(46,105,0)),
-	    color-stop(0.63, rgb(114,255,71))
-	);
-	background-image: -moz-linear-gradient(
-	    right bottom,
-	    rgb(161,194,29) 33%,
-	    rgb(46,105,0) 100%,
-	    rgb(114,255,71) 63%
-	)
-}
 
-.gradient8{
+.textGradient{
 	background-image: -webkit-gradient(
-	    linear,
-	    right bottom,
-	    left top,
-	    color-stop(0.33, rgb(235,235,14)),
-	    color-stop(1, rgb(160,204,14)),
-	    color-stop(0.63, rgb(114,255,71))
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, rgba(255,255,255,0)),
+		color-stop(1, rgba(255,255,255,255))
 	);
 	background-image: -moz-linear-gradient(
-	    right bottom,
-	    rgb(235,235,14) 33%,
-	    rgb(160,204,14) 100%,
-	    rgb(114,255,71) 63%
+		center top,
+		rgba(255,255,255, 0) 0%,
+		rgba(255,255,255, 255) 100%
 	);
-}
-
-.gradient9{
-	background-image: -webkit-gradient(
-	    linear,
-	    right bottom,
-	    left top,
-	    color-stop(0.21, rgb(203,250,233)),
-	    color-stop(0.53, rgb(104,230,230)),
-	    color-stop(0.86, rgb(35,217,196))
-	);
-	background-image: -moz-linear-gradient(
-	    right bottom,
-	    rgb(203,250,233) 21%,
-	    rgb(104,230,230) 53%,
-	    rgb(35,217,196) 86%
-	)
+	width: 100%;
+	height: 50px;
+	float: left;
+	clear: both;
 }
