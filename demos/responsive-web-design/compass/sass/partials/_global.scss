@@ -1,0 +1,38 @@
+body {
+	background: #e2e3cc;
+	color: #333;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font: 14px/1.8 sans-serif;
+	
+	margin-top:20px;
+}
+
+#container{
+	margin:auto;
+	width:480px;
+	#main{
+		@include clearfix;
+	}
+}
+
+@media screen and (min-width:980px) and (max-width: 1200px) {
+	body{background:#e1fff0;}
+	#container{
+		width:980px;
+	}
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1460px) {
+	body{background:#ff0080;color:#fff;}
+	#container{
+		width:1200px;
+	}
+}
+
+
+@media screen and (min-width: 1460px){
+	body{background:#ff0080;color:#fff;}
+	#container{
+		width:1460px;
+	}
+}
