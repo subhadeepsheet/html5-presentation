@@ -143,6 +143,12 @@
 			
 			<article id="rounded-corners">
 				<style>
+					#rounded-corners section {
+						margin-top:10px;
+					}
+					#rounded-corners section > ul > li {
+						padding:10px;
+					}
 					#rounded-corners section > ul > li:before { 
 						content:"";
 					}
@@ -161,26 +167,14 @@
 						color:yellow;
 					}
 					
-					#rounded-corners section > ul > li:nth-child(1) a {
-						-webkit-border-radius: 30px;
-					}
-					
 					#rounded-corners section > ul > li:nth-child(2) a {
-						width:30px;
-						height:30px;
 						-webkit-border-radius: 30px;
 					}
 					
 					#rounded-corners section > ul > li:nth-child(3) a {
-						-webkit-transsition-property: all;
-						-webkit-transition-duration: 0.8s;
-						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-						-webkit-border-radius: 10px;
-						background:#000;
-
-					}
-					#rounded-corners section > ul > li:nth-child(3) a:hover {
-						-webkit-border-radius: 40px;
+						width:30px;
+						height:30px;
+						-webkit-border-radius: 30px;
 					}
 					
 					#rounded-corners .pagination li:before {
@@ -205,35 +199,84 @@
 						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 					}
 					
+					#rounded-corners .pagination li:first-child,
+					#rounded-corners .pagination li:last-child {
+						-webkit-border-radius:0px;
+						-webkit-border-top-right-radius:0px;
+						border-width: 10px 10px 10px 0px;
+						border-color: transparent rgba(0, 0, 0, 0.6);
+						border-style: solid;
+						content: "";
+						background-color:transparent;
+						width:0px;
+						height:0px;
+					}
+					#rounded-corners .pagination li:last-child {
+						border-width: 10px 0px 10px 10px;
+					}
+					
 					#rounded-corners .pagination li:hover {
 						background-color:#ff0000;
 					}
 					
-					#rounded-corners #canon-example {
-						width:749px;
-						height:225px;
-						display:block;
-						margin-top:10px;
-						background:url(images/rounded-corners.jpg) no-repeat;
+					/* Animated button / shadows */
+					#rounded-corners section > ul > li:nth-child(4) a {
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+						-webkit-border-radius: 10px;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
+						background:#000;
 					}
-					#rounded-corners #canon-example:hover {
-						background:url(images/rounded-corners-degrade.jpg) no-repeat;
+					#rounded-corners section > ul > li:nth-child(4) a:hover {
+						-webkit-border-radius: 40px;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
 					}
 					
+					#rounded-corners section > ul > li:nth-child(5) a {
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+						-webkit-border-top-left-radius: 50px;
+						-webkit-border-bottom-left-radius: 50px;
+						-webkit-border-bottom-right-radius:0px;
+						-webkit-border-top-right-radius: 0px;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
+
+						background:#000;
+					}
+					#rounded-corners section > ul > li:nth-child(5) a:hover {
+						-webkit-border-top-left-radius: 0px;
+						-webkit-border-bottom-left-radius: 0px;
+						-webkit-border-bottom-right-radius:50px;
+						-webkit-border-top-right-radius: 50px;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
+					}
+					#rounded-corners section > ul > li:nth-child(5) a:active {
+						-webkit-border-top-left-radius: 0px;
+						-webkit-border-bottom-left-radius: 50px;
+						-webkit-border-bottom-right-radius:0px;
+						-webkit-border-top-right-radius: 0px;
+					}
 				</style>
 				<!--//
-					Roudned Corners
-					 - Circles / Backings / Maskings
-					 - Degrade to squares, not so bad is it?
-					 - Masks with rounded corners
+					Rounded Corners
+					 - The easy stuff, rounded edges on buttons 
+					 - Circles, take a break from rectangualr patterns
+					 - You can even animate the corners.  The gradients, borders, and shadows respect the rounded edges
+					 - Rounded corners degrade to ... squares and angles. 
+					 - Not such a bad thing
 				//-->
-				<h3>Rounded corners</h3>
+				<h3>Rounded Corners</h3>
 				<section>
-					<ul>
-						<li><a>Rounded Button</a></li>
+					<ul class="build">
+						<li>Take the edge off your web design</li>
+						<li>With a.... <a>Rounded Button</a></li>
 						<li>
-							Circles as Buttons
+							Or make it a circle
 							<ul class="pagination clearfix">
+								<li></li>
+								<li></li>
 								<li></li>
 								<li></li>
 								<li></li>
@@ -243,26 +286,90 @@
 						<li>Examples of Degradation
 							<span id="canon-example"></span>
 						</li>
+						<li>You can also... <a>Animate Corners!</a></li>
+						<li>Edges don't have to be <a>Uniform</a></li>
 					</ul>
 				</section>
 			</article>
 			
 			<article id="rounded-corners-masks">
 				<style>
-					#rounded-corners-masks > ul  {
+					#rounded-corners-masks  ul.cloud li {
+						background:#fff;
+						width:40px;
+						height:50px;
+						position:absolute;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
+					}
+					#rounded-corners-masks .cloud {
+						position:relative;
+						left:300px;
+					}
+					#rounded-corners-masks .cloud li {
+						-webkit-border-radius:100px;
+						background:#fff;
+						width:50px;
+						height:50px;
+						border:1px solid red;
+						display:block;
+						position:absolute;
+						top:0;
+						left:0;
+					}
+					#rounded-corners-masks .cloud li:before {
+						content:"";
+					}
+					#rounded-corners-masks .cloud li:nth-child(1) {
+						-webkit-border-radius:50px;
+						-webkit-border-top-left-radius:0px;
+						-webkit-border-bottom-right-radius:0px;
+						left:30px;
 						
+					}
+					#rounded-corners-masks .cloud li:nth-child(2) {
+						-webkit-border-radius:100px;
+						left:100px;
+						
+					}
+					#rounded-corners-masks .cloud li:nth-child(3) {
+						-webkit-border-radius:100px;
+						left:200px;						
+					}
+					#rounded-corners-masks .circle-mask  {
+						background:url(http://www.indiepubgames.com/mediaLib/images/fast_forward_screen02_680b.jpg) no-repeat;
+						background-size:250px;
+						width:150px;
+						height:150px;
+						border:1px solid #000;
+						-webkit-box-shadow:0px 5px 12px #1D1D1D;
+						display:block;
+						margin-top:20px;
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+					}
+					#rounded-corners-masks .circle-mask:hover {
+						-webkit-border-radius:150px;
+					}
+					#rounded-corners-masks .circle-mask:active {
+						-webkit-border-top-left-radius:0px;
+						-webkit-border-bottom-right-radius:0px;
 					}
 				</style>
 				
 				<h3>Design with Rounded Corners</h3>
+				<!--// Cloud with "pulsing" animation 
+					* recreate using vector art to allow animation / interaction
+					* use as a mask on an image
+				//-->
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>1. Links to Clip Art made with CSS</li>
+					<li>2. Links to Animated Clip Art</li>
+					<li>3. Mask an image with a rounded edge
+						<span class="circle-mask"></span>
+					</li>
 				</ul>
 			</article>
-			
-			
 			<article>
 			    
 			    <style>
@@ -605,6 +712,64 @@
 				
 				<ul class="build">
 					<li>Also: <em>This is completely fine.</em></li>
+				</ul>
+			</article>
+			<article>
+				<h3>Also: <em>This is completely fine.</em></h3>
+			</article>
+			<article class="rounded-corners-degredation">
+				<style>
+					.rounded-corners-degredation .canon-example {
+						width:710px;
+						height:250px;
+						display:block;
+						margin-top:10px;
+						background:url(images/rounded-corners.jpg) no-repeat;
+						background-size:710px;
+					}
+					.rounded-corners-degredation ul li:before {
+						content:"";
+					}
+					.rounded-corners-degredation .canon-example:hover {
+						background:url(images/rounded-corners-degrade.jpg) no-repeat;
+					}
+					.rounded-corners-degredation .espn-example {
+						width:650px;
+						height:320px;
+						display:block;
+						margin-top:10px;
+						background:url(images/espn_rounded.jpg) no-repeat;
+						background-size:650px;
+					}
+					.rounded-corners-degredation .espn-example:hover {
+						background:url(images/espn_square.jpg) no-repeat;
+						background-size:650px;
+					}
+					
+					
+					.rounded-corners-degredation h4 span {
+						content:"";
+						width:10px;
+						height:10px;
+						display:inline-block;
+						border:2px solid #000;
+						text-indent:-999em;
+						margin-right:2px;
+					}
+				</style>	
+				<h3>Rounded Corners Degradation</h3>
+				<ul class="">
+					<li class="canon-example"></li>
+					<li>Graceful degradation</li>
+					<li>Retain functionality, alter execution</li>
+				</ul>
+			</article>
+			<article class="rounded-corners-degredation">
+				<h3>Rounded Corners Degradation
+				<ul class="">
+					<li class="espn-example"></li>
+					<li><h4>Still legible and functional</h4></li>
+					<li><h4>N<span>o</span>t t<span>o</span><span>o</span> bad right?</h4></li>
 				</ul>
 			</article>
 			<article>
