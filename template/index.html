@@ -121,28 +121,193 @@
 				</ul>
 			</article>
 			
-			<article>
-				<h1>So what&rsquo;s HTML5?</h1>
+			<article class="fill">
+				<h3>So what&rsquo;s HTML5?</h3>
+				<p>
+					<img src="images/html5.png" style="margin-left: -50px;">
+				</p>
+				<div class="source white">
+					Source: Eric Schmidt
+				</div>
 			</article>
-			<article>
-				<h3>Basically, it&rsquo;s a ton of things.</h3>
-				<ul class="build">
-					<li>Audio/Video</li>
-					<li>Canvas/WebGL</li>
-					<li>Custom fonts</li>
-					<li>CSS 3D effects, transitions, animations</li>
-				</ul>
+			<article class="smaller">
+				<q>HTML5 is being developed as the next major revision of HTML (HyperText Markup Language), the core markup language of the World Wide Web. The Web Hypertext Application Technology Working Group (WHATWG)&hellip;</q>
+				<div class="author">Wikipedia</div>
 			</article>
 			
 			<article class="smaller">
 				<h1>The Basics</h1>
 				<p>(Or, things we should've had access to years ago if it wasn't for IE, standards bodies that weren't progressing the spec, and clients who feel the need to have requirements that everything work in antiquated browsers that should have died out along with fax machines.)</p>
 			</article>
-			<article>
+			
+			<article id="rounded-corners">
+				<style>
+					#rounded-corners section > ul > li:before { 
+						content:"";
+					}
+					#rounded-corners section > ul > li a {	
+						display:inline-block;
+						margin-left:20px;
+						position:relative;
+						top:3px;
+						content:"\00a0";
+						color:#fff;
+						background:#000;
+						font-size:.8em;
+						padding:10px;
+					}
+					#rounded-corners section > ul > li a:hover {
+						color:yellow;
+					}
+					
+					#rounded-corners section > ul > li:nth-child(1) a {
+						-webkit-border-radius: 30px;
+					}
+					
+					#rounded-corners section > ul > li:nth-child(2) a {
+						width:30px;
+						height:30px;
+						-webkit-border-radius: 30px;
+					}
+					
+					#rounded-corners section > ul > li:nth-child(3) a {
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+						-webkit-border-radius: 10px;
+						background:#000;
+
+					}
+					#rounded-corners section > ul > li:nth-child(3) a:hover {
+						-webkit-border-radius: 40px;
+					}
+					
+					#rounded-corners .pagination li:before {
+						content:"";
+					}
+					#rounded-corners .pagination {
+						display:inline-block;
+						position:relative;
+						top:13px;
+					}
+					#rounded-corners .pagination li {
+						display:inline-block;
+						margin-left:10px;
+						content:"\00a0";
+						width:20px;
+						height:20px;
+						-webkit-border-radius:20px;
+						cursor:pointer;
+						background-color:#000;
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+					}
+					
+					#rounded-corners .pagination li:hover {
+						background-color:#ff0000;
+					}
+					
+					#rounded-corners #canon-example {
+						width:749px;
+						height:225px;
+						display:block;
+						margin-top:10px;
+						background:url(images/rounded-corners.jpg) no-repeat;
+					}
+					#rounded-corners #canon-example:hover {
+						background:url(images/rounded-corners-degrade.jpg) no-repeat;
+					}
+					
+				</style>
+				<!--//
+					Roudned Corners
+					 - Circles / Backings / Maskings
+					 - Degrade to squares, not so bad is it?
+					 - Masks with rounded corners
+				//-->
 				<h3>Rounded corners</h3>
+				<section>
+					<ul>
+						<li><a>Rounded Button</a></li>
+						<li>
+							Circles as Buttons
+							<ul class="pagination clearfix">
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</li>						
+						<li><a>Animate Corners!</a></li>
+						<li>Examples of Degredation
+							<span id="canon-example"></span>
+						</li>
+					</ul>
+				</section>
 			</article>
+			
+			<article id="rounded-corners-masks">
+				<style>
+					#rounded-corners-masks > ul  {
+						
+					}
+				</style>
+				
+				<h3>Design with Rounded Corners</h3>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</article>
+			
+			
 			<article>
+			    
+			    <style>
+    			    @import url("../css/dropshadows.css");
+                </style>
+			    
 				<h3>Drop shadows</h3>
+				<p>Look, no images:</p>
+				
+				<div class="drop-shadow lifted">
+				    <p>Yay, lifted corners!</p>
+				</div>
+				
+				<div class="drop-shadow curled">
+				    <p>Now for some curled corners.</p>
+				</div>
+				
+				<div class="drop-shadow raised">
+                    <p>A raised box.</p>
+                </div>
+				
+				<div class="drop-shadow perspective">
+				    <p>Perspective.</p>
+				</div>
+				
+				<div class="drop-shadow curved curved-hz-1">
+                    <p>Singly horizontal curve.</p>
+                </div>
+
+                <div class="drop-shadow curved curved-hz-2">
+                    <p>Horizontal curves.</p>
+                </div>
+
+                <div class="drop-shadow lifted rotated">
+                    <p>Rotated box, woo.</p>
+                </div>
+                
+                <div class="drop-shadow colors">
+                    <p>Ooh, pretty colors.</p>
+                </div>
+                
+                <div class="drop-shadow simple">
+                    <p>Orange Boxy.</p>
+                </div>
+                
+				
 			</article>
 			<article>
 				<h3>Text shadows</h3>
@@ -186,8 +351,107 @@
 			<article>
 				<h3>CSS 3D transforms</h3>
 			</article>
+
+            <article>
+				<h2>A Simple Animated Scene in CSS3</h2>
+			</article>
+
 			<article class="demo">
-				<h2>[DEMO] (Christine Cheung)</h2>
+			    
+			    <style>
+    			    @import url("../css/simple-animated-scene.css");
+                </style>
+
+				<div id="sky" class="target">
+
+        			<div id="cloud" class="target"> 
+        				<div class="cloud cloud-1"></div> 
+        				<div class="cloud cloud-2"></div> 
+        				<div class="cloud cloud-3"></div> 
+        			</div> 
+
+        			<div id="sun" class="target"></div> 
+
+        			<div id="moon" class="target"> 
+        				<div class="moon"> 
+        				</div> 
+        				<div class="moon moon-2">
+        				</div> 
+        			</div> 
+
+        			<div id="ground" class="target"></div> 
+
+        		</div><!-- #sky --> 
+
+        		<input type="button" value="ANIMATE THE SCENE" id="startbutton"> 
+				
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script> 
+				
+				<script> 
+                $(function () {
+                	var s = null,
+
+                	AnimationSpace = {
+                		settings: {
+                			tabHeaders: null,
+                			tabSections: null,
+                			currentIndex: null,
+                			speed: 800,
+                			collection: null,
+                			i: null,
+                			j: null,
+                			startButton: $("#startbutton")
+                		},
+
+                		init: function () {
+                			s = this.settings;
+                			s.tabSections = $("div.tab");
+                			$(s.tabSections[0]).slideDown(s.speed);
+                			$(s.tabSections[1]).slideUp(s.speed);
+                			$(s.tabSections[2]).slideUp(s.speed);
+                			$(s.tabSections[3]).slideUp(s.speed);
+                			$(s.tabSections[4]).slideUp(s.speed);
+                			this.getClickedTab();
+                			this.startAnimation();
+                		},
+
+                		getClickedTab: function () {
+                			s = this.settings;
+                			s.tabHeaders = $("#sidebar_tabs ul.headers a");
+                			s.collection = $("#tab_content div.tab");
+                			$(s.tabHeaders).click(function () {
+                				s.currentIndex = $(this).parent().index();
+                				for (s.i = 0, s.j = s.collection.length; s.i < s.j; s.i += 1) {
+                					if (s.i !== s.currentIndex) {
+                						$(s.tabSections[s.i]).slideUp(s.speed);
+
+                					} else {
+                						$(s.tabSections[s.i]).slideDown(s.speed);
+                					}
+                				}
+                				return false;
+                			});
+                		},
+
+                		startAnimation: function () {
+                			s = this.settings;
+
+                			s.startButton.click(function() {
+                				$("div.target").toggleClass("animate");
+                				if (s.startButton.attr("value") === "ANIMATE THE SCENE") {
+                					s.startButton.attr("value", "RESET THE ANIMATION");
+                				} else {
+                					s.startButton.attr("value", "ANIMATE THE SCENE");	
+                				}
+                			});
+                		}
+
+                	};
+
+                	AnimationSpace.init();
+                });
+                </script>
+				
 			</article>
 			
 			<article>
@@ -195,6 +459,12 @@
 			</article>
 			<article>
 				<h3>Canvas/WebGL</h3>
+				<ul>
+					<li><a href="http://people.opera.com/danield/html5/html5logo/" onclick="window.open('http://inception.davepedu.com/noflash.php');" target="_blank">HTML5 Logo <em>&mdash; in HTML5!</em></a></li>
+					<li><a href="http://html5demos.com/canvas-grad">Interactive Gradients</a></li>
+					<li><a href="http://www.cs.helsinki.fi/u/ilmarihe/metatunnel.html">Metatunnel</a></li>
+					<li><a href="http://www.ro.me/">ROME - 3 Dreams of Black</a></li>
+				</ul>
 			</article>
 			
 			<article>
@@ -202,22 +472,32 @@
 			</article>
 			
 			<article>
-				<h3>HTML5 endpoints</h3>
-				<ul>
-					<li>WebSockets</li>
-					<li>Flexbox</li>
-					<li>History API</li>
-					<li>Pointer Events</li>
-				</ul>
-			</article>
-			<article>
-				<h3>HTML5 libraries</h3>
-				<ul>
-					<li>Modernizr</li>
-					<li>jQuery</li>
-					<li>SASS + Compass</li>
-					<li>Flux Capacitors</li>
-				</ul>
+				<style>
+					.column {
+						float: left;
+						width: 50%;
+					}
+				</style>
+				
+				<div class="column">
+					<h3>HTML5 endpoints</h3>
+					<ul>
+						<li>WebSockets</li>
+						<li>Flexbox</li>
+						<li>History API</li>
+						<li>Pointer Events</li>
+					</ul>
+				</div>
+				
+				<div class="column">
+					<h3>HTML5 libraries</h3>
+					<ul>
+						<li>Modernizr</li>
+						<li>jQuery</li>
+						<li>SASS + Compass</li>
+						<li>Flux Capacitors</li>
+					</ul>
+				</div>
 			</article>
 			
 			<article>
@@ -265,17 +545,73 @@
 			</article>
 			<article>
 				<h3>We&rsquo;ve gotten better. We&rsquo;re currently running under these assumptions:</h3>
-				<pre>[Browser Support Chart]</pre>
+				<img src="images/browser-support-chart.png" style="display: block; margin-top: 30px; max-width: 100%" />
 			</article>
 			<article>
 				<h3>But that&rsquo;s not where we want to be.</h3>
+				<ul class="build">
+					<li>(Pause for dramatic effect&hellip;)</li>
+				</ul>
 			</article>
-			<article>
-				<h3>(Pause for dramatic effect&hellip;)</h3>
-			</article>
-			<article>
+			<article class="smaller">
 				<h3>Instead of supporting <em>browsers</em>, let&rsquo;s support <em>features</em>:</h3>
-				<pre>http://www.w3.org/html/logo/#downloads, [Canvas] [WebGL] [CSS 3D] [Fonts] [Gradients] [Etc]</pre>
+				
+				<style>
+					ul.logos {
+						display: block;
+						margin: 40px auto;
+						text-align: center;
+					}
+					
+					ul.logos li {
+						margin: 5px;
+						display: inline-block;
+					}
+					
+					ul.logos li:before {
+						content: "";
+					}
+					
+					ul.logos img {
+						margin: 0 auto;
+						display: block;
+					}
+				</style>
+				
+				<ul class="logos">
+					<li>
+						<img src="images/html5-features/HTML5_3D_effects_128.png" width="128" height="128" alt="HTML5 3D Effects 128" />
+						Canvas, WebGL, CSS 3D
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Connectivity_128.png" width="128" height="128" alt="HTML5 Connectivity 128" />
+						Web Sockets
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Device_Access_128.png" width="128" height="128" alt="HTML5 Device Access 128" />
+						Geolocation, Tilt Events
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Multimedia_128.png" width="128" height="128" alt="HTML5 Multimedia 128" />
+						Audio, Video
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Offline_Storage_128.png" width="128" height="128" alt="HTML5 Offline Storage 128" />
+						Offline Storage
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Performance_128.png" width="128" height="128" alt="HTML5 Performance 128" />
+						Web Workers
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Semantics_128.png" width="128" height="128" alt="HTML5 Semantics 128" />
+						HTML5
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Styling_128.png" width="128" height="128" alt="HTML5 Styling 128" />
+						CSS3
+					</li>
+				</ul>
 			</article>
 			<article>
 				<h3>These browsers support our features:</h3>
