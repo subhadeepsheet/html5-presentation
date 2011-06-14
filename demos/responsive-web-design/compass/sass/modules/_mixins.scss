@@ -1,0 +1,28 @@
+// Default font
+@mixin typeface {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+// Global transition
+@mixin global-transition {
+	@include transition(all, 2s, ease-in-out);
+}
+
+// Inline Block + Zoom Fix
+@mixin inline-block-zoom {
+	@include inline-block;
+	zoom: 1;
+}
+
+@mixin inlineUL{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	
+}
+@mixin inlineLI{
+	margin:0px;
+	padding:0px;
+	@include inline-block-zoom;
+	
+}

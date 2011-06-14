@@ -1,0 +1,109 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]><html class="no-js ie6" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<title>Adaptive/Responsive Web Design - with Media Queries</title>
+		
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		
+		<meta name="media-url" content="" />
+
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico" />
+
+		<!-- CSS: implied media="all" -->
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr-2.0b1.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<header role="banner">
+				<nav role="navigation">
+					<ul>
+						<li><a href="#" title="">Link1</a></li>
+						<li><a href="#" title="">Another Link</a></li>
+						<li><a href="#" title="">One More Link</a></li>
+						<li><a href="#" title="">Link :)</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div id="main" role="main" class="clearfix">
+				<aside>
+					<nav role="navigation">
+						<ul>
+							<li><a href="#" title="">sub-Link1</a></li>
+							<li><a href="#" title="">sub-Another Link</a></li>
+							<li><a href="#" title="">sub-One More Link</a></li>
+							<li><a href="#" title="">sub-Link</a></li>
+						</ul>
+					</nav>
+				</aside>
+				<article>
+					<section>
+					    <hgroup><h1>This is a Title</h1></hgroup>
+						<p>
+							<img src="http://lorempixum.com/500/350" alt="This is an image" />
+							Aenean tincidunt, sem eu malesuada pretium, est leo facilisis ligula, sed facilisis enim turpis eget sapien. Aliquam a dolor sem, a mattis justo. Donec sed imperdiet risus. Sed ut nisi nec dui tincidunt porta nec sit amet ipsum. Donec mollis aliquet ligula eget faucibus. Mauris quis eros elit.  In varius commodo imperdiet. Nulla facilisi. Ut in lacus nec justo dignissim ullamcorper vitae ut turpis. Sed iaculis tellus in mauris ornare sed volutpat nisl gravida. In vulputate nisi vel mauris tristique dignissim quis sed arcu. Fusce malesuada, mauris non blandit elementum, diam nulla posuere urna, ut vestibulum massa nibh non velit. In pretium sapien semper sem accumsan vel egestas arcu iaculis. Integer dictum laoreet elit, convallis semper nunc tristique vitae? Proin a enim nunc, eu pellentesque nisl. Integer turpis sapien.
+							<br /><br />
+							Vivamus vel lacus risus. Ut vel enim metus. Duis blandit magna sit amet est ornare imperdiet. Sed sollicitudin; nisi egestas imperdiet cursus, turpis mi placerat est, sodales placerat diam metus ut massa. Morbi commodo justo vitae lectus viverra ultrices.  Nulla facilisi. Duis massa dui, vehicula et volutpat ut, pellentesque nec erat. Vestibulum at libero est; in tempor mauris. In aliquam, nulla ut dapibus lacinia, mi libero semper felis, sed dictum elit elit sit amet ligula. Aliquam vel arcu lorem.
+						</p>
+					</section>
+					<ul class="thumbs">
+						<li><img src="http://lorempixum.com/265/195" alt="thumb" /></li>
+						<li><img src="http://lorempixum.com/265/196" alt="thumb" /></li>
+						<li><img src="http://lorempixum.com/265/197" alt="thumb" /></li>
+						<li><img src="http://lorempixum.com/265/198" alt="thumb" /></li>
+						<li><img src="http://lorempixum.com/265/199" alt="thumb" /></li>
+						<li><img src="http://lorempixum.com/265/200" alt="thumb" /></li>
+					</ul>
+					<section class="right">
+					    <hgroup><h1>This is another Title</h1></hgroup>
+						<p>
+							<img src="http://lorempixum.com/500/355" alt="This is another image" />
+							Aenean tincidunt, sem eu malesuada pretium, est leo facilisis ligula, sed facilisis enim turpis eget sapien. Aliquam a dolor sem, a mattis justo. Donec sed imperdiet risus. Sed ut nisi nec dui tincidunt porta nec sit amet ipsum. Donec mollis aliquet ligula eget faucibus. Mauris quis eros elit.  In varius commodo imperdiet. Nulla facilisi. Ut in lacus nec justo dignissim ullamcorper vitae ut turpis. Sed iaculis tellus in mauris ornare sed volutpat nisl gravida. In vulputate nisi vel mauris tristique dignissim quis sed arcu. Fusce malesuada, mauris non blandit elementum, diam nulla posuere urna, ut vestibulum massa nibh non velit. In pretium sapien semper sem accumsan vel egestas arcu iaculis. Integer dictum laoreet elit, convallis semper nunc tristique vitae? Proin a enim nunc, eu pellentesque nisl. Integer turpis sapien.
+							<br /><br />
+							Vivamus vel lacus risus. Ut vel enim metus. Duis blandit magna sit amet est ornare imperdiet. Sed sollicitudin; nisi egestas imperdiet cursus, turpis mi placerat est, sodales placerat diam metus ut massa. Morbi commodo justo vitae lectus viverra ultrices.  Nulla facilisi. Duis massa dui, vehicula et volutpat ut, pellentesque nec erat. Vestibulum at libero est; in tempor mauris. In aliquam, nulla ut dapibus lacinia, mi libero semper felis, sed dictum elit elit sit amet ligula. Aliquam vel arcu lorem.
+						</p>
+					</section>
+					
+				</article>
+			</div>
+		</div> <!--! end of #container -->
+		
+		<!-- JavaScript at the bottom for fast page loading -->
+		<div class="hidden scripts">
+			<script type="text/javascript">
+				(function () {
+					Modernizr.load([{
+						// jQuery 1.6.1
+						load : "//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js",
+						complete : function () {
+							if (!window.jQuery) {
+								Modernizr.load("js/libs/jquery-1.6.1.min.js");
+							}
+						}
+					}, { // SITE
+						load : [
+							// jQuery Plugins
+							"js/libs/plugins/respond.min.js"
+						]
+					}]);
+				}
+				
+				());				
+			</script>
+		</div>
+	</body>
+</html>
