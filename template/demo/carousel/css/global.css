@@ -1,0 +1,150 @@
+/* line 4, ../sass/global.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+
+/* line 11, ../sass/global.scss */
+.no-js {
+  visibility: hidden;
+}
+
+/* line 15, ../sass/global.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 19, ../sass/global.scss */
+body {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(#666666, #ffffff);
+  background-image: -moz-linear-gradient(#666666, #ffffff);
+  background-image: -o-linear-gradient(#666666, #ffffff);
+  background-image: linear-gradient(#666666, #ffffff);
+}
+
+/* line 23, ../sass/global.scss */
+.parallax {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 582px;
+}
+
+/* line 32, ../sass/global.scss */
+.parallax-viewport {
+  position: relative;
+  /* relative, absolute, fixed */
+  overflow: hidden;
+}
+
+/* line 37, ../sass/global.scss */
+.parallax-layer {
+  position: absolute;
+}
+
+/* line 41, ../sass/global.scss */
+body, #viewport, section {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 45, ../sass/global.scss */
+#viewport {
+  overflow: hidden;
+}
+
+/* line 49, ../sass/global.scss */
+#viewport, #viewport-inner {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 54, ../sass/global.scss */
+#viewport-inner {
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 350ms;
+  -webkit-transition-duration: 350ms;
+  -o-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -moz-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  -o-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  -moz-transition-delay: 0;
+  -webkit-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0;
+}
+
+/* line 58, ../sass/global.scss */
+section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 65, ../sass/global.scss */
+.csstransforms3d #viewport {
+  -webkit-perspective: 800;
+  perspective: 800;
+  -webkit-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+/* line 69, ../sass/global.scss */
+.csstransforms3d #viewport.carousel {
+  -webkit-perspective-origin: 50% 100%;
+  perspective-origin: 50% 100%;
+}
+/* line 73, ../sass/global.scss */
+.csstransforms3d #viewport #viewport-inner {
+  position: relative;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -khtml-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/* line 78, ../sass/global.scss */
+.csstransforms3d #viewport section {
+  position: absolute;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -khtml-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/* line 83, ../sass/global.scss */
+.csstransforms3d #viewport .parallax {
+  -moz-transition-property: all;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 350ms;
+  -webkit-transition-duration: 350ms;
+  -o-transition-duration: 350ms;
+  transition-duration: 350ms;
+  -moz-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  -webkit-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  -o-transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  transition-timing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  -moz-transition-delay: 0;
+  -webkit-transition-delay: 0;
+  -o-transition-delay: 0;
+  transition-delay: 0;
+  /*			-webkit-box-reflect: below 4px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.75, transparent), to(white));*/
+}
+
+/* line 92, ../sass/global.scss */
+.no-csstransforms3d #viewport section {
+  float: left;
+}
