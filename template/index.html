@@ -78,6 +78,8 @@
 
 		<meta charset="utf-8" />
 		<script src="../slides.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/gradients.css"></link>
 	</head>
 	
 	<style>
@@ -108,52 +110,410 @@
 				</p>
 			</article>
 			<article>
-				<h3>Hey.</h3>
-				<p>This preso's about HTML5</p>
+				<h1>Hey.</h1>
+				<p>This preso&rsquo;s about HTML5</p>
 			</article>
 			<article>
 				<h3>Stuff to talk about:</h3>
 				<ul class="build">
-					<li>What HTML5 is</li>
+					<li>What <em>is</em> HTML5?</li>
 					<li>How we want to use it</li>
 					<li>How we can start using it now</li>
 				</ul>
 			</article>
 			
-			<article>
-				<h1>So what&rsquo;s HTML5?</h1>
+			<article class="fill">
+				<h3>So what&rsquo;s HTML5?</h3>
+				<p>
+					<a href="http://www.kevs3d.co.uk/dev/html5logo/" target="_blank"><img src="images/html5.png" style="margin-left: -50px;"></a>
+				</p>
+				<div class="source white">
+					Source: Eric Schmidt
+				</div>
 			</article>
-			<article>
-				<h3>Basically, it&rsquo;s a ton of things.</h3>
-				<ul class="build">
-					<li>Audio/Video</li>
-					<li>Canvas/WebGL</li>
-					<li>Custom fonts</li>
-					<li>CSS 3D effects, transitions, animations</li>
-				</ul>
+			<article class="smaller">
+				<q>HTML5 is being developed as the next major revision of HTML (HyperText Markup Language), the core markup language of the World Wide Web. The Web Hypertext Application Technology Working Group (WHATWG)&hellip;</q>
+				<div class="author">Wikipedia</div>
+			</article>
+			<article class="smaller">
+				<q>HTML5 is a buzzword like <em>AJAX</em> and <em>Web 2.0</em> that encapsulates the most exciting improvements to the web platform in the past and next few years.</q>
+				<div class="author">Some guy on the internet</div>
 			</article>
 			
 			<article class="smaller">
 				<h1>The Basics</h1>
-				<p>(Or, things we should've had access to years ago if it wasn't for IE, standards bodies that weren't progressing the spec, and clients who feel the need to have requirements that everything work in antiquated browsers that should have died out along with fax machines.)</p>
+				<p>(Or, things we should&rsquo;ve had access to years ago if it wasn&rsquo;t for IE, standards bodies that weren&rsquo;t progressing the spec, and clients who feel the need to have requirements that everything work in antiquated browsers that should have died out along with fax machines.)</p>
+			</article>
+			
+			<article id="rounded-corners">
+				<style>
+					#rounded-corners section {
+						margin-top:10px;
+					}
+					#rounded-corners section > ul > li {
+						padding:10px;
+					}
+					#rounded-corners section > ul > li:before { 
+						content:"";
+					}
+					#rounded-corners section > ul > li a {	
+						display:inline-block;
+						margin-left:20px;
+						position:relative;
+						top:3px;
+						content:"\00a0";
+						color:#fff;
+						background:#000;
+						font-size:.8em;
+						padding:10px;
+					}
+					#rounded-corners section > ul > li a:hover {
+						color:yellow;
+					}
+					
+					#rounded-corners section > ul > li:nth-child(2) a {
+						-webkit-border-radius: 30px;
+					}
+					
+					#rounded-corners section > ul > li:nth-child(3) a {
+						width:30px;
+						height:30px;
+						-webkit-border-radius: 30px;
+					}
+					
+					#rounded-corners .pagination li:before {
+						content:"";
+					}
+					#rounded-corners .pagination {
+						display:inline-block;
+						position:relative;
+						top:13px;
+					}
+					#rounded-corners .pagination li {
+						display:inline-block;
+						margin-left:10px;
+						content:"\00a0";
+						width:20px;
+						height:20px;
+						-webkit-border-radius:20px;
+						cursor:pointer;
+						background-color:#000;
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+					}
+					
+					#rounded-corners .pagination li:first-child,
+					#rounded-corners .pagination li:last-child {
+						-webkit-border-radius:0px;
+						-webkit-border-top-right-radius:0px;
+						border-width: 10px 10px 10px 0px;
+						border-color: transparent rgba(0, 0, 0, 0.6);
+						border-style: solid;
+						content: "";
+						background-color:transparent;
+						width:0px;
+						height:0px;
+					}
+					#rounded-corners .pagination li:last-child {
+						border-width: 10px 0px 10px 10px;
+					}
+					
+					#rounded-corners .pagination li:hover {
+						background-color:#ff0000;
+					}
+					
+					/* Animated button / shadows */
+					#rounded-corners section > ul > li:nth-child(4) a {
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+						-webkit-border-radius: 10px;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
+						background:#000;
+					}
+					#rounded-corners section > ul > li:nth-child(4) a:hover {
+						-webkit-border-radius: 40px;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
+					}
+					
+					#rounded-corners section > ul > li:nth-child(5) a {
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+						-webkit-border-top-left-radius: 50px;
+						-webkit-border-bottom-left-radius: 50px;
+						-webkit-border-bottom-right-radius:0px;
+						-webkit-border-top-right-radius: 0px;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
+
+						background:#000;
+					}
+					#rounded-corners section > ul > li:nth-child(5) a:hover {
+						-webkit-border-top-left-radius: 0px;
+						-webkit-border-bottom-left-radius: 0px;
+						-webkit-border-bottom-right-radius:50px;
+						-webkit-border-top-right-radius: 50px;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
+					}
+					#rounded-corners section > ul > li:nth-child(5) a:active {
+						-webkit-border-top-left-radius: 0px;
+						-webkit-border-bottom-left-radius: 50px;
+						-webkit-border-bottom-right-radius:0px;
+						-webkit-border-top-right-radius: 0px;
+					}
+				</style>
+				<!--//
+					Rounded Corners
+					 - The easy stuff, rounded edges on buttons 
+					 - Circles, take a break from rectangualr patterns
+					 - You can even animate the corners.  The gradients, borders, and shadows respect the rounded edges
+					 - Rounded corners degrade to ... squares and angles. 
+					 - Not such a bad thing
+				//-->
+				<h3>Rounded Corners</h3>
+				<section>
+					<ul class="build">
+						<li>Take the edge off your web design</li>
+						<li>With a.... <a>Rounded Button</a></li>
+						<li>
+							Or make it a circle
+							<ul class="pagination clearfix">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</li>						
+						<li>You can also... <a>Animate Corners!</a></li>
+						<li>Edges don't have to be <a>Uniform</a></li>
+					</ul>
+				</section>
+			</article>
+			
+			<article id="rounded-corners-masks">
+				<style>
+					#rounded-corners-masks  ul.cloud li {
+						background:#fff;
+						width:40px;
+						height:50px;
+						position:absolute;
+						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
+					}
+					#rounded-corners-masks .cloud {
+						position:relative;
+						left:300px;
+					}
+					#rounded-corners-masks .cloud li {
+						-webkit-border-radius:100px;
+						background:#fff;
+						width:50px;
+						height:50px;
+						border:1px solid red;
+						display:block;
+						position:absolute;
+						top:0;
+						left:0;
+					}
+					#rounded-corners-masks .cloud li:before {
+						content:"";
+					}
+					#rounded-corners-masks .cloud li:nth-child(1) {
+						-webkit-border-radius:50px;
+						-webkit-border-top-left-radius:0px;
+						-webkit-border-bottom-right-radius:0px;
+						left:30px;
+						
+					}
+					#rounded-corners-masks .cloud li:nth-child(2) {
+						-webkit-border-radius:100px;
+						left:100px;
+						
+					}
+					#rounded-corners-masks .cloud li:nth-child(3) {
+						-webkit-border-radius:100px;
+						left:200px;						
+					}
+					#rounded-corners-masks .circle-mask  {
+						background:url(http://www.indiepubgames.com/mediaLib/images/fast_forward_screen02_680b.jpg) no-repeat;
+						background-size:250px;
+						width:150px;
+						height:150px;
+						border:1px solid #000;
+						-webkit-box-shadow:0px 5px 12px #1D1D1D;
+						display:block;
+						margin-top:20px;
+						-webkit-transsition-property: all;
+						-webkit-transition-duration: 0.8s;
+						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+					}
+					#rounded-corners-masks .circle-mask:hover {
+						-webkit-border-radius:150px;
+					}
+					#rounded-corners-masks .circle-mask:active {
+						-webkit-border-top-left-radius:0px;
+						-webkit-border-bottom-right-radius:0px;
+					}
+				</style>
+				
+				<h3>Design with Rounded Corners</h3>
+				<!--// Cloud with "pulsing" animation 
+					* recreate using vector art to allow animation / interaction
+					* use as a mask on an image
+				//-->
+				<ul>
+					<li>1. Links to Clip Art made with CSS</li>
+					<li>2. Links to Animated Clip Art</li>
+					<li>3. Mask an image with a rounded edge
+						<span class="circle-mask"></span>
+					</li>
+				</ul>
 			</article>
 			<article>
-				<h3>Rounded corners</h3>
-			</article>
-			<article>
+			    
+			    <style>
+    			    @import url("../css/dropshadows.css");
+                </style>
+			    
 				<h3>Drop shadows</h3>
-			</article>
-			<article>
-				<h3>Text shadows</h3>
+				<p>Look, no images:</p>
+				
+				<div class="drop-shadow lifted">
+				    <p>Yay, lifted corners!</p>
+				</div>
+				
+				<div class="drop-shadow curled">
+				    <p>Now for some curled corners.</p>
+				</div>
+				
+				<div class="drop-shadow raised">
+                    <p>A raised box.</p>
+                </div>
+				
+				<div class="drop-shadow perspective">
+				    <p>Perspective.</p>
+				</div>
+				
+				<div class="drop-shadow curved curved-hz-1">
+                    <p>Singly horizontal curve.</p>
+                </div>
+
+                <div class="drop-shadow curved curved-hz-2">
+                    <p>Horizontal curves.</p>
+                </div>
+
+                <div class="drop-shadow lifted rotated">
+                    <p>Rotated box, woo.</p>
+                </div>
+                
+                <div class="drop-shadow colors">
+                    <p>Ooh, pretty colors.</p>
+                </div>
+                
+                <div class="drop-shadow simple">
+                    <p>Orange Boxy.</p>
+                </div>
+                
+				
 			</article>
 			<article>
 				<h3>Gradients</h3>
+				<ul class="gradientsList">
+					<li class="gradient1"></li>
+					<li class="gradient2"></li>
+					<li class="gradient3"></li>
+					<li class="gradient4"></li>
+					<li class="gradient5"></li>
+					<li class="gradient6"></li>
+					<li class="gradient7"></li>
+					<li class="gradient8"></li>
+				</ul>
+
+				<div id="gradientText">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis rhoncus imperdiet. Sed elementum ipsum orci. Maecenas et turpis vel arcu consequat dignissim. Cras lectus magna, tincidunt eu iaculis nec, pretium non turpis. Aenean nec leo nunc. Mauris a nibh eu enim dapibus fermentum. In vitae purus sit amet nisi ornare malesuada. Duis purus odio, malesuada non bibendum non, suscipit a dui. Curabitur lacus magna, rhoncus vel ultricies ac, dapibus sed nulla. Nullam ac dignissim nisi. Donec vitae tellus velit. Proin interdum rhoncus libero vel eleifend. Aenean sed erat augue. Nulla dignissim nunc tempor elit congue vel facilisis augue condimentum. Vestibulum commodo molestie urna non tempor. Phasellus in urna vitae lacus auctor rhoncus. Fusce malesuada vestibulum lobortis. Vivamus sed arcu et massa posuere pulvinar. Vivamus sem quam, aliquam vel tristique ut, convallis non elit. Praesent bibendum vulputate tortor nec faucibus.</p>
+
+					<p>Vivamus vestibulum urna pharetra neque ultricies porttitor. Ut sed nunc quis est suscipit ultricies at eu dui. Cras a odio sed ipsum varius rutrum. Sed lacinia, quam vitae suscipit aliquet, est tellus porta sapien, eget bibendum mi magna et sem. Aliquam erat volutpat. Nulla elementum ullamcorper odio ac suscipit. Aliquam nec venenatis ante. Duis id arcu massa. Mauris id nisl sapien, eu dapibus elit. Vivamus porta, mauris ac luctus hendrerit, nibh diam aliquet diam, at consectetur nunc enim eu enim. Phasellus justo dolor, rhoncus a tristique eu, cursus sed felis. Cras accumsan mollis tortor vel iaculis. Nam at lectus magna. Aenean sit amet mi nisl, in tincidunt lacus. Pellentesque tortor diam, bibendum id elementum non, egestas a orci. Nullam tristique, nunc ut venenatis euismod, enim risus mattis diam, nec ornare neque dolor ut dui.</p>
+
+					<p>Etiam massa mi, volutpat ac consectetur ac, iaculis ut velit. Nullam non magna at enim rhoncus cursus id nec nisi. Integer vitae lorem nulla, at consequat ligula. Integer sit amet purus erat. Duis consectetur nulla vel nulla aliquet sollicitudin. Mauris accumsan sem vel est blandit quis facilisis neque commodo. Sed lectus erat, iaculis nec viverra eget, feugiat ac odio. Curabitur sit amet nisi non orci lacinia fermentum. In sagittis feugiat nisl, nec posuere eros consectetur id. Integer ut risus dolor. Nulla vitae nisi ante. Integer tincidunt viverra felis, ut consequat arcu luctus vel. In hac habitasse platea dictumst. Nunc bibendum accumsan turpis a aliquam. Sed sodales metus a elit cursus pretium.</p> 
+				</div>
+				<div id="textGradient"></div>
+
 			</article>
 			<article>
 				<h3>Custom fonts</h3>
+				<ul class="build">
+					<li>Beyond &ldquo;web-safe&rdquo; font stacks</li>
+					<li>No asset preparation requirements</li>
+					<li>No user interaction necessary (e.g. click to install)</li>
+					<li>
+						Actual fonts!<em style="color: #c00;">*</em>
+						<div class="source"><em style="color: #c00;">*</em> Type foundries permitting</div>
+					</li>
+				</ul>
+				<!--//
+				Many years ago, before the advent of desktop publishing, if you wanted words set in a particular typeface, you had to go to a typesetter. A typesetter, or compositor, as they were sometimes called, was a person whose job it was to take the written word (in the form of a document or manuscript) and ‘set’ the type in the desired typeface. The designer would choose what typeface they wanted – and all the ligatures, underlines, italics and whatnot – and then scribble all over the manuscript so the typesetter could set the correct type.
+
+				Then along came Desktop Publishing and every Tom, Dick and Harry could choose type on their computer and an entire link in the typographic chain was removed within just a few years. Well, that’s progress I guess. That was until recently when typesetting was reborn on the web in the guise of a new CSS property, but let’s not get ahead of ourselves…
+
+				Setting type on the web has historically been limited to a small subset of “web safe” fonts commonly installed on users’ systems. Typographical variety came only from a few Serifs (e.g. Times, Georgia), Sans-serifs (e.g. Helvetica, Verdana) or Monospace fonts (e.g. Monaco, Courier). Expecting users to have any fonts installed outside of these usual suspects is a total shot in the dark. If a designer wanted to use another typeface, that typically meant either asset preparation in Photoshop, or embedding the font in a Flash movie; rendering text in a SWF wrapper. Either method adds unnecessary overhead — we can do better!
+
+				Enter @font-face.
+
+				Now, in supported browsers*, we can render live text dynamically, using REAL fonts, by simply embedding them into pages with a few lines of CSS.
+
+				*Browser vendors seem intent on ensuring that nothing is ever simple.
+
+				Not all fonts are created equal. There are a handful of different formats in circulation, and every major browser supports a different subset.
+
+				Safari supports OTF, TTF, and SVG fonts. Chrome supports TTF and SVG. Firefox supports OTF and TTF. Internet Explorer only supports EOT. Mobile browsers like Safari on the iPad and iPhone require SVG. There’s even yet another, called Web Open Font Format, or WOFF, which looks to become the standard for future font embedding.
+
+				Confused yet? You should be. Fortunately, there are brilliant developers that have worked this all out for you.
+
+				It seems that just to cover your bases for all the browsers in use today, you’d need a half-dozen fonts. Well, sort of… Font Squirrel Generator [http://www.fontsquirrel.com/fontface/generator] is a free online tool used to create the required font permutations for cross-browser use. Simply upload any font, agree to the terms, and with a little luck, you’ll receive to a ZIP file containing everything necessary for typographic bliss.
+
+				That is, you would if this were strictly a discussion of what’s technically possible.
+
+				Like most software, for any font you want to use on a computer or website, you need a license. Unfortunately, not every type foundry agrees on the licensing & usage of their typefaces as web fonts. While many allow for embedding with @font-face, others explicitly forbid it — like Hoefler & Frere-Jones, creators of the popular Gotham family of typefaces.
+
+				The good news is, services like Typekit [http://typekit.com], Fontdeck [http://fontdeck.com], and Google Fonts [http://www.google.com/webfonts] have already negotiated font licensing & hosting arrangements with various type foundries. In fact, some foundries exclusively permit Typekit to host their wares.
+
+				Great, but what can I do with all this?
+
+				Combined with your newly beautiful type, leveraging additional standards-based technologies like CSS3 & Javascript allows for interesting typographic expression.
+ 				//-->
 			</article>
-			<article class="demo">
-				<h2>[DEMO] (Scott Twede)</h2>
+			<article id="fontdemo" class="demo">
+				<link rel="stylesheet" href="../webfonts.css" />
+				<h3>@font-face + text-shadow</h3>
+				<select id="textstyle">
+					<optgroup label="Shadow Proclamation">
+						<option value="none">Default</option>
+						<option value="blur">blur</option>
+						<option value="dropshadow">dropshadow</option>
+						<option value="emboss">emboss</option>
+						<option value="inset">inset</option>
+						<option value="fire">fire</option>
+						<option value="neon">neon</option>
+						<option value="texture">texture</option>
+						<option value="threeD">threeD</option>
+					</optgroup>
+				</select>
+				<p id="lorem" class="none">
+					<span class="nofont">Lorem ipsum dolor sit amet, consectetur adipisicing elit,</span>
+					<span class="script">sed do eiusmod tempor incididunt ut</span>
+					<span class="sniglet">labore et dolore magna aliqua. Ut enim ad</span>
+					<span class="orbitron">minim veniam, quis nostrud exercitation ullamco</span>
+					<span class="gothic">laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</span>
+					<span class="book">esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</span>
+					<span class="raleway"> cupidatat non proident, sunt in culpa qui officia deserunt</span>
+					<span class="chunk"> mollit anim id est laborum.</span>
+				</p>
+				<script>
+					$("#textstyle").change(function () {
+						$("#lorem").attr("class", $(this).val());
+					});
+				</script>
 			</article>
 			
 			<article>
@@ -161,21 +521,148 @@
 			</article>
 			<article>
 				<h3>Responsive Web</h3>
+				<ul class="build">
+					<li>What?</li>
+					<li style="font-size:.667em;padding-left:10px;line-height:1em;">
+						The approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.
+					</li>
+					<li>Why?</li>
+					<ul class="build">
+						<li style="font-size:.667em;padding-left:10px;line-height:.667em;">Better user experience</li>
+						<li style="font-size:.667em;padding-left:10px;line-height:.667em;">It's only 1 site!, No need to develop multiple versions for different devices</li>
+						<li style="font-size:.667em;padding-left:10px;line-height:.667em;">Easy to maintain and develop, it's pure CSS!</li>
+					</ul>
+					<li>How?</li>
+					<li style="font-size:.667em;padding-left:10px;line-height:.667em;">Proportionally size everything</li>
+					<ul style="font-size:.667em;">
+						<li style="font-size:.917em;padding-left:10px;line-height:.917em;">Grid/layout</li>
+						<li style="font-size:.917em;padding-left:10px;line-height:.917em;">Images</li>
+						<li style="font-size:.917em;padding-left:10px;line-height:.917em;">Font Size</li> 
+					</ul>
+				</ul>
 			</article>
 			<article class="demo">
-				<h2>[DEMO] (Felipe Arroyo)</h2>
+				<h3>Demos</h3>
+				<ul style="margin:10px 0 20px 20px;">
+					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="../demos/responsive-web-design/base.html" title="Mine" target="_blank">Mine :)</a></li>
+					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="../demos/responsive-web-design/example.html" title="Fit text" target="_blank">Fit-text</a></li>
+					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://mediaqueri.es/" title="Another" target="_blank">Lots More</a></li>
+				</ul>
+				<h3>Resources</h3>
+				<ul style="margin-top:10px;">
+					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://www.alistapart.com/articles/responsive-web-design/" title="A list apart" target="_blank">A List Apart</a></li>
+					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" title="Smashing Magazine" target="_blank">Smashing</a></li>
+					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://sixrevisions.com/web_design/understanding-the-elements-of-responsive-web-design/" title="Smashing Magazine" target="_blank">Six Revisions</a></li>
+					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://blog.bloop.co/the-practicalities-of-css-media-queries-lesso" title="A 'lessons learned' blog" target="_blank">A 'lessons learned' blog</a></li>
+				</ul>
+				
 			</article>
-			<article>
-				<h3>CSS transitions</h3>
-			</article>
-			<article>
-				<h3>CSS animations</h3>
-			</article>
-			<article>
-				<h3>CSS 3D transforms</h3>
-			</article>
+
 			<article class="demo">
-				<h2>[DEMO] (Christine Cheung)</h2>
+			    
+			    <style>
+    			    @import url("../css/simple-animated-scene.css");
+                </style>
+
+				<h3>A Simple Animated Scene in CSS3</h3>
+				<p style="font-size: 0.8em; margin: 0 0 20px 0;">Without images, using minimal JavaScript</p>
+
+				<div id="sky" class="target">
+
+        			<div id="cloud" class="target"> 
+        				<div class="cloud cloud-1"></div> 
+        				<div class="cloud cloud-2"></div> 
+        				<div class="cloud cloud-3"></div> 
+        			</div> 
+
+        			<div id="sun" class="target"></div> 
+
+        			<div id="moon" class="target"> 
+        				<div class="moon"> 
+        				</div> 
+        				<div class="moon moon-2">
+        				</div> 
+        			</div> 
+
+        			<div id="ground" class="target"></div> 
+
+        		</div><!-- #sky --> 
+
+        		<input type="button" value="ANIMATE THE SCENE" id="startbutton" style="margin: 0 0 0 20px;" class="punch"> 
+				
+				<script> 
+                $(function () {
+                	var s = null,
+
+                	AnimationSpace = {
+                		settings: {
+                			tabHeaders: null,
+                			tabSections: null,
+                			currentIndex: null,
+                			speed: 800,
+                			collection: null,
+                			i: null,
+                			j: null,
+                			startButton: $("#startbutton")
+                		},
+
+                		init: function () {
+                			s = this.settings;
+                			s.tabSections = $("div.tab");
+                			$(s.tabSections[0]).slideDown(s.speed);
+                			$(s.tabSections[1]).slideUp(s.speed);
+                			$(s.tabSections[2]).slideUp(s.speed);
+                			$(s.tabSections[3]).slideUp(s.speed);
+                			$(s.tabSections[4]).slideUp(s.speed);
+                			this.getClickedTab();
+                			this.startAnimation();
+                		},
+
+                		getClickedTab: function () {
+                			s = this.settings;
+                			s.tabHeaders = $("#sidebar_tabs ul.headers a");
+                			s.collection = $("#tab_content div.tab");
+                			$(s.tabHeaders).click(function () {
+                				s.currentIndex = $(this).parent().index();
+                				for (s.i = 0, s.j = s.collection.length; s.i < s.j; s.i += 1) {
+                					if (s.i !== s.currentIndex) {
+                						$(s.tabSections[s.i]).slideUp(s.speed);
+
+                					} else {
+                						$(s.tabSections[s.i]).slideDown(s.speed);
+                					}
+                				}
+                				return false;
+                			});
+                		},
+
+                		startAnimation: function () {
+                			s = this.settings;
+
+                			s.startButton.click(function() {
+                				$("div.target").toggleClass("animate");
+                				if (s.startButton.attr("value") === "ANIMATE THE SCENE") {
+                					s.startButton.attr("value", "RESET THE ANIMATION");
+                				} else {
+                					s.startButton.attr("value", "ANIMATE THE SCENE");	
+                				}
+                			});
+                		}
+
+                	};
+
+                	AnimationSpace.init();
+                });
+                </script>
+				
+			</article>
+			<article>
+				<h3>CSS transitions, animations &amp; 3d transforms</h3>
+				
+				<ul>
+					<li><a target="_blank" href="demo/carousel/cube-transition.html">Star Cube</a></li>
+					<li><a target="_blank" href="demo/carousel/3d-carousel-transition.html">War Carousel</a></li>
+				</ul>
 			</article>
 			
 			<article>
@@ -183,6 +670,12 @@
 			</article>
 			<article>
 				<h3>Canvas/WebGL</h3>
+				<ul>
+					<li><a href="http://people.opera.com/danield/html5/html5logo/" onclick="window.open('http://inception.davepedu.com/noflash.php');" target="_blank">HTML5 Logo <em>&mdash; in HTML5!</em></a></li>
+					<li><a href="http://html5demos.com/canvas-grad">Interactive Gradients</a></li>
+					<li><a href="http://www.cs.helsinki.fi/u/ilmarihe/metatunnel.html">Metatunnel</a></li>
+					<li><a href="http://www.ro.me/">ROME - 3 Dreams of Black</a></li>
+				</ul>
 			</article>
 			
 			<article>
@@ -190,22 +683,32 @@
 			</article>
 			
 			<article>
-				<h3>HTML5 endpoints</h3>
-				<ul>
-					<li>WebSockets</li>
-					<li>Flexbox</li>
-					<li>History API</li>
-					<li>Pointer Events</li>
-				</ul>
-			</article>
-			<article>
-				<h3>HTML5 libraries</h3>
-				<ul>
-					<li>Modernizr</li>
-					<li>jQuery</li>
-					<li>SASS + Compass</li>
-					<li>Flux Capacitors</li>
-				</ul>
+				<style>
+					.column {
+						float: left;
+						width: 50%;
+					}
+				</style>
+				
+				<div class="column">
+					<h3>HTML5 endpoints</h3>
+					<ul>
+						<li>WebSockets</li>
+						<li>Flexbox</li>
+						<li>History API</li>
+						<li>Pointer Events</li>
+					</ul>
+				</div>
+				
+				<div class="column">
+					<h3>HTML5 libraries</h3>
+					<ul>
+						<li>Modernizr</li>
+						<li>jQuery</li>
+						<li>SASS + Compass</li>
+						<li>Flux Capacitors</li>
+					</ul>
+				</div>
 			</article>
 			
 			<article>
@@ -213,17 +716,74 @@
 			</article>
 			<article>
 				<h3>Simply: Legacy browsers do not support these features.</h3>
-			</article>
-			<article>
-				<h3>Also: <em>This is completely fine.</em></h3>
+				
+				<ul class="build">
+					<li>Also: <em>This is completely fine.</em></li>
+				</ul>
 			</article>
 			<article>
 				<h3>Graceful degradation</h3>
-				<pre>Demo: Rounded corners, drop shadows</pre>
+				
+				<p>Our sites will look awesome in the latest/most standard-compliants browsers, and will still look good in older browsers.</p>
+				
+			</article>
+			<article class="rounded-corners-degredation">
+				<style>
+					.rounded-corners-degredation .canon-example {
+						width:710px;
+						height:250px;
+						display:block;
+						margin-top:10px;
+						background:url(images/rounded-corners.jpg) no-repeat;
+						background-size:710px;
+					}
+					.rounded-corners-degredation ul li:before {
+						content:"";
+					}
+					.rounded-corners-degredation .canon-example:hover {
+						background:url(images/rounded-corners-degrade.jpg) no-repeat;
+					}
+					.rounded-corners-degredation .espn-example {
+						width:650px;
+						height:320px;
+						display:block;
+						margin-top:10px;
+						background:url(images/espn_rounded.jpg) no-repeat;
+						background-size:650px;
+					}
+					.rounded-corners-degredation .espn-example:hover {
+						background:url(images/espn_square.jpg) no-repeat;
+						background-size:650px;
+					}
+					
+					
+					.rounded-corners-degredation li span {
+						content:"";
+						width:10px;
+						height:10px;
+						display:inline-block;
+						border:2px solid #000;
+						text-indent:-999em;
+						margin-right:2px;
+					}
+				</style>	
+				<h3>Graceful degradation</h3>
+				<ul class="">
+					<li class="canon-example"></li>
+					<li>Retain functionality, alter execution</li>
+				</ul>
+			</article>
+			<article class="rounded-corners-degredation">
+				<h3>Graceful degradation</h3>
+				<div class="espn-example"></div>
+				<p>Still legible and functional</p>
+				<ul class="build">
+					<li>N<span>o</span>t t<span>o</span><span>o</span> bad right?</li>
+				</ul>
 			</article>
 			<article>
 				<h3>Do:</h3>
-				<ul class="build">
+				<ul>
 					<li>Use advanced techniques</li>
 					<li>Degrade gracefully</li>
 					<li>Be okay with degradation</li>
@@ -232,54 +792,154 @@
 			</article>
 			<article>
 				<h3>Don&rsquo;t:</h3>
-				<ul class="build">
+				<ul>
 					<li>Worry (be happy)</li>
 					<li>Provide overly-complicated fallbacks</li>
-					<li>Over-emphasize this point. Make it status quo. We&rsquo;ll buy you beers.</li>
+					<li>Over-emphasize this point. Make it status quo. We&rsquo;ll buy you beers.*</li>
 				</ul>
+				<em style="padding: 0 0 0 20px; font-size: 0.5em;">* or whiskey or wine or tea</em>
 			</article>
 			<article>
-				<h3>The web evolves. We should too.</h3>
+				<h2>The web evolves. We should too.</h2>
 			</article>
 			
 			<article>
 				<h1>The Goal</h1>
 			</article>
 			<article>
-				<h3>Eight months ago, we were here:</h3>
-				<pre>[Simple list of supported browsers]</pre>
+				<h3>In the past, we were here:</h3>
+				<img src="images/old-sow.png" style="display: block; margin-top: 30px; max-width: 100%" />
 			</article>
 			<article>
-				<h3>We&rsquo;ve gotten better. We&rsquo;re currently running under these assumptions:</h3>
-				<pre>[Browser Support Chart]</pre>
+				<h3>Today, we have a chart:</h3>
+				<img src="images/browser-support-chart.png" style="display: block; margin-top: 30px; max-width: 100%" />
 			</article>
-			<article>
-				<h3>But that&rsquo;s not where we want to be.</h3>
-			</article>
-			<article>
-				<h3>(Pause for dramatic effect&hellip;)</h3>
-			</article>
-			<article>
-				<h3>Instead of supporting <em>browsers</em>, let&rsquo;s support <em>features</em>:</h3>
-				<pre>http://www.w3.org/html/logo/#downloads, [Canvas] [WebGL] [CSS 3D] [Fonts] [Gradients] [Etc]</pre>
+			<article class="smaller">
+				<h3>Tomorrow, let&rsquo;s support <em>features</em> instead of <em>browsers</em></h3>
+				
+				<style>
+					ul.logos {
+						display: block;
+						margin: 40px auto;
+						text-align: center;
+					}
+					
+					ul.logos li {
+						margin: 5px;
+						display: inline-block;
+					}
+					
+					ul.logos li:before {
+						content: "";
+					}
+					
+					ul.logos img {
+						margin: 0 auto;
+						display: block;
+					}
+				</style>
+				
+				<ul class="logos">
+					<li>
+						<img src="images/html5-features/HTML5_Semantics_128.png" width="128" height="128" alt="HTML5 Semantics 128" />
+						HTML5
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Styling_128.png" width="128" height="128" alt="HTML5 Styling 128" />
+						CSS3
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_3D_effects_128.png" width="128" height="128" alt="HTML5 3D Effects 128" />
+						Canvas/WebGL
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Connectivity_128.png" width="128" height="128" alt="HTML5 Connectivity 128" />
+						Web Sockets
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Device_Access_128.png" width="128" height="128" alt="HTML5 Device Access 128" />
+						Geolocation
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Multimedia_128.png" width="128" height="128" alt="HTML5 Multimedia 128" />
+						Audio, Video
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Offline_Storage_128.png" width="128" height="128" alt="HTML5 Offline Storage 128" />
+						Offline Storage
+					</li>
+					<li>
+						<img src="images/html5-features/HTML5_Performance_128.png" width="128" height="128" alt="HTML5 Performance 128" />
+						Web Workers
+					</li>
+				</ul>
 			</article>
 			<article>
 				<h3>These browsers support our features:</h3>
-				<pre>[IE9] [Chrome] [Firefox] [Safari]</pre>
+				
+				<ul style="width: 300px" class="logos">
+					<li>
+						<img src="images/chrome.png" alt="Chrome" />
+						Chrome
+					</li>
+					<li>
+						<img src="images/firefox.png" alt="Firefox" />
+						Firefox
+					</li>
+					<li>
+						<img src="images/ie9.png" alt="IE9" />
+						IE 9
+					</li>
+					<li>
+						<img src="images/safari.png" alt="Safari" />
+						Safari
+					</li>
+				</ul>
 			</article>
 			<article>
 				<h3>These don&rsquo;t:</h3>
-				<pre>[&lt;IE9]</pre>
+				
+				<ul class="logos">
+					<li>
+						<img src="images/ie8.png" alt="IE8" />
+						IE 8
+					</li>
+					<li>
+						<img src="images/ie7.png" alt="IE7" />
+						IE 7
+					</li>
+					<li>
+						<img src="images/ie6.png" alt="IE6" />
+						IE 6
+					</li>
+				</ul>
 			</article>
 			<article>
 				<h3>Or rather, these <em>do</em> (what a twist!):</h3>
-				<pre>[&lt;IE9]</pre>
+
+				<ul class="logos">
+					<li>
+						<img src="images/ie8.png" alt="IE8" />
+						IE 8
+					</li>
+					<li>
+						<img src="images/ie7.png" alt="IE7" />
+						IE 7
+					</li>
+					<li>
+						<img src="images/ie6.png" alt="IE6" />
+						IE 6
+					</li>
+				</ul>
 				
-				<p>How?</p>
+				<ul class="build">
+					<li>How?</li>
+				</ul>
 			</article>
 			<article>
 				<h3>Google Chrome Frame</h3>
-				<ul>
+				<img style="position: absolute; top: 0; right: 0;" src="images/chromeframe.png" alt="Google Chrome Frame" />
+				<ul style="position: relative; z-index: 1; top: 270px;">
 					<li><a href="http://google.com/chromeframe">http://google.com/chromeframe</a></li>
 					<li>It&rsquo;s a plugin. Y&rsquo;know, just like that <em>other</em> plugin</li>
 				</ul>
@@ -304,7 +964,7 @@
 			
 			<article>
 				<h3>
-					Thank you!  <img src="images/justabill.png" style="top: 0px; right: 0px; position: absolute; width: 345px;">
+					Thank you! <img src="images/justabill.png" style="top: 0px; right: 0px; position: absolute; width: 345px;">
 				</h3>
 
 				<ul>
@@ -314,7 +974,7 @@
 					<li>Richard Herrera</li>
 					<li>Taka Kojima</li>
 					<li>Scott Twede</li>
-					<li>Slides: <a href="#">ff0000.github.com/red-labs</a></li>
+					<li>Slides: <a href="#">ff0000.github.com/html5-presentation/</a></li>
 				</ul>
 
 			</article>

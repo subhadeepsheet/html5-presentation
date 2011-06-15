@@ -1,0 +1,83 @@
+header {
+	text-align:center;
+	background:#ccc;
+	nav{
+		ul{
+			@include inlineUL;
+			li{
+				@include inlineLI;
+				a{
+					@include inline-block-zoom;
+					height:50px;
+					line-height:50px;
+					padding:0 10px;
+					text-decoration:none;
+					text-transform:uppercase;
+					font-size:1.083em;
+					font-weight:bold;
+					outline:none;
+					color:#333;
+					&:hover{
+						@include single-text-shadow(rgba(255, 255, 0, .8), 0px,0px,5px)
+						
+					}
+				}
+			}
+			
+		}
+	}
+}
+
+@media screen and (min-width:980px) and (max-width: 1200px) {
+	
+	header {
+		nav{
+			ul{
+				
+				li{
+					a{
+						margin:0 10px;
+						font-size:1.5em;
+					}
+				}
+				
+			}
+		}
+	}
+	
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1460px) {
+	header {
+		nav{
+			ul{
+				
+				li{
+					a{
+						margin:0 30px;
+						font-size:2em;
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 1460px){
+	header {
+		nav{
+			ul{
+				
+				li{
+					a{
+						margin:0 50px;
+						font-size:2.5em;
+					}
+				}
+				
+			}
+		}
+	}
+}

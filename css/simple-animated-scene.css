@@ -1,0 +1,616 @@
+ 
+#sky {
+	width: 500px;
+	height: 450px;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	background-color: #525252;
+	float: left;
+}
+ 
+#sky.animate {
+	-webkit-animation-name: sky;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;	
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+ 
+	-moz-animation-name: sky;
+	-moz-animation-duration: 10s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: 1;	
+	-moz-animation-direction: normal;
+	-moz-animation-delay: 0;
+	-moz-animation-play-state: running;
+	-moz-animation-fill-mode: forwards;
+ 
+	animation-name: sky;
+	animation-duration: 10s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+ 
+}
+ 
+@-webkit-keyframes sky {
+ 
+	0% {
+		background-color: #525252;
+	}
+	
+	33% {
+		background-color: #6293e5;
+	}
+ 
+	66% {
+		background-color: #6293e5;
+	}
+ 
+	100% {
+		background-color: #525252;
+	}
+ 
+}
+ 
+@-moz-keyframes sky {
+ 
+	0% {
+		background-color: #525252;
+	}
+	
+	33% {
+		background-color: #6293e5;
+	}
+ 
+	66% {
+		background-color: #6293e5;
+	}
+ 
+	100% {
+		background-color: #525252;
+	}
+ 
+}
+ 
+@keyframes sky {
+ 
+	0% {
+		background-color: #525252;
+	}
+	
+	33% {
+		background-color: #6293e5;
+	}
+ 
+	66% {
+		background-color: #6293e5;
+	}
+ 
+	100% {
+		background-color: #525252;
+	}
+ 
+}
+ 
+#ground {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 500px;
+	height: 154px;
+	background: #6c5228;
+	z-index: 4;
+}
+ 
+#ground.animate {
+	-webkit-animation-name: ground;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;	
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+ 
+	-moz-animation-name: ground;
+	-moz-animation-duration: 10s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: 1;	
+	-moz-animation-direction: normal;
+	-moz-animation-delay: 0;
+	-moz-animation-play-state: running;
+	-moz-animation-fill-mode: forwards;
+ 
+	animation-name: ground;
+	animation-duration: 10s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+ 
+@-webkit-keyframes ground {
+ 
+	0% {
+		background: #6c5228;
+	}
+	
+	33% {
+		background: #48a037;
+	}
+ 
+	66% {
+		background: #48a037;
+	}
+ 
+	100% {
+		background: #6c5228;
+	}
+ 
+}
+ 
+@-moz-keyframes ground {
+ 
+	0% {
+		background: #6c5228;
+	}
+	
+	33% {
+		background: #48a037;
+	}
+ 
+	66% {
+		background: #48a037;
+	}
+ 
+	100% {
+		background: #6c5228;
+	}
+ 
+}
+ 
+@keyframes ground {
+ 
+	0% {
+		background: #6c5228;
+	}
+	
+	33% {
+		background: #48a037;
+	}
+ 
+	66% {
+		background: #48a037;
+	}
+ 
+	100% {
+		background: #6c5228;
+	}
+ 
+}
+ 
+#sun {
+	background: #ffd630;
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	border-radius: 70px;
+	z-index: 2;
+	bottom: 0;
+	left: 340px;
+}
+ 
+#sun.animate {
+	-webkit-animation-name: sunrise;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;	
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+ 
+	-moz-animation-name: sunrise;
+	-moz-animation-duration: 10s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: 1;	
+	-moz-animation-direction: normal;
+	-moz-animation-delay: 0;
+	-moz-animation-play-state: running;
+	-moz-animation-fill-mode: forwards;
+	
+	animation-name: sunrise;
+	animation-duration: 10s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+ 
+@-webkit-keyframes sunrise {
+ 
+	0% {
+		bottom: 0;
+		left: 340px;
+		background: #f00;
+	}
+	
+	33% {
+		bottom: 340px;
+		left: 340px;
+		background: #ffd630;
+	}
+ 
+	66% {
+		bottom: 340px;
+		left: 40px;		
+		background: #ffd630;
+	}
+ 
+	100% {
+		bottom: 0;
+		left: 40px;
+		background: #f00;
+	}
+ 
+}
+ 
+@-moz-keyframes sunrise {
+ 
+	0% {
+		bottom: 0;
+		left: 340px;
+		background: #f00;
+		
+	}
+	
+	33% {
+		bottom: 340px;
+		left: 340px;
+		background: #ffd630;
+	}
+ 
+	66% {
+		bottom: 340px;
+		left: 40px;
+		background: #ffd630;
+	}
+ 
+	100% {
+		bottom: 0;
+		left: 40px;
+		background: #f00;
+	}
+ 
+}
+ 
+@keyframes sunrise {
+ 
+	0% {
+		bottom: 0;
+		left: 340px;
+		background: #f00;
+	}
+	
+	33% {
+		bottom: 340px;
+		left: 340px;
+		background: #ffd630;
+	}
+ 
+	66% {
+		bottom: 340px;
+		left: 40px;
+		background: #ffd630;
+	}
+ 
+	100% {
+		bottom: 0;
+		left: 40px;
+		background: #f00;
+	}
+ 
+}
+ 
+#cloud {
+	position: relative;
+	top: 50px;
+	left: -100px;
+	opacity: 0;
+	z-index: 3;
+}
+ 
+#cloud.animate {
+	-webkit-animation-name: cloud;
+	-webkit-animation-duration: 12s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;	
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+ 
+	-moz-animation-name: cloud;
+	-moz-animation-duration: 12s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: 1;	
+	-moz-animation-direction: normal;
+	-moz-animation-delay: 0;
+	-moz-animation-play-state: running;
+	-moz-animation-fill-mode: forwards;
+ 
+	animation-name: cloud;
+	animation-duration: 12s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;	
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+ 
+@-webkit-keyframes cloud {
+ 
+	0% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	50% {
+		opacity: 1;
+		left: 60px;
+	}
+	
+	75% {
+		opacity: 1;
+		left: 100px;
+	}
+	
+	100% {
+		opacity: 0;
+		left: 500px;
+	}
+ 
+}
+ 
+@-moz-keyframes cloud {
+ 
+	0% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	50% {
+		opacity: 1;
+		left: 60px;
+	}
+	
+	75% {
+		opacity: 1;
+		left: 100px;
+	}
+	
+	100% {
+		opacity: 0;
+		left: 500px;
+	}
+ 
+}
+ 
+@keyframes cloud {
+ 
+	0% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	50% {
+		opacity: 1;
+		left: 60px;
+	}
+	
+	75% {
+		opacity: 1;
+		left: 100px;
+	}
+	
+	100% {
+		opacity: 0;
+		left: 500px;
+	}
+ 
+}
+ 
+.cloud {
+	border-radius: 90px / 30px;
+	width: 160px;
+	height: 50px;
+	background: #fff;
+	position: absolute;
+	top: 10px;
+}
+ 
+.cloud-2 {
+	left: 50px;
+	top: 0;
+}
+ 
+.cloud-3 {
+	left: 110px;
+	top: 20px;
+ 
+}
+ 
+#moon {
+	position: relative;
+	opacity: 0;
+	top: 50px;
+	left: -100px;
+}
+ 
+#moon.animate {
+	-webkit-animation-name: moon;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-delay: 0;
+	-webkit-animation-play-state: running;
+	-webkit-animation-fill-mode: forwards;
+ 
+	-moz-animation-name: moon;
+	-moz-animation-duration: 10s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-direction: normal;
+	-moz-animation-delay: 0;
+	-moz-animation-play-state: running;
+	-moz-animation-fill-mode: forwards;
+ 
+	animation-name: moon;
+	animation-duration: 10s;
+	animation-timing-function: ease;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-delay: 0;
+	animation-play-state: running;
+	animation-fill-mode: forwards;
+}
+ 
+@-webkit-keyframes moon {
+ 
+	0% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	50% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	90% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	100% {
+		opacity: 1;
+		left: 50px;
+	}
+ 
+}
+ 
+@-moz-keyframes moon {
+ 
+	0% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	50% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	90% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	100% {
+		opacity: 1;
+		left: 50px;
+	}
+ 
+}
+ 
+@keyframes moon {
+ 
+	0% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	50% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	90% {
+		opacity: 0;
+		left: -100px;
+	}
+	
+	100% {
+		opacity: 1;
+		left: 50px;
+	}
+ 
+}
+ 
+.moon {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background: #fff;
+	position: absolute;
+}
+
+.moon-2 {
+	background: #525252;
+	position: absolute;
+	top: -20px;
+	left: 20px;
+}
+
+/* punch
+*******************************************************************************/
+.punch {
+  background: #4162a8;
+  border-top: 1px solid #38538c;
+  border-right: 1px solid #1f2d4d;
+  border-bottom: 1px solid #151e33;
+  border-left: 1px solid #1f2d4d;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  box-shadow: inset 0 1px 10px 1px #5c8bee, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  color: #fff;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 0px -1px 1px #1e2d4d;
+  -webkit-background-clip: padding-box;
+}
+
+.punch:hover {
+  -moz-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  -webkit-box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  box-shadow: inset 0 0px 20px 1px #87adff, 0px 1px 0 #1d2c4d, 0 6px 0px #1f3053, 0 8px 4px 1px #111;
+  cursor: pointer;
+}
+
+.punch:active {
+  -moz-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111;
+  box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111;
+  margin-top: 58px;
+}

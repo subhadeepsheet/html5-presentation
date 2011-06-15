@@ -1,0 +1,96 @@
+// Here's where we define some default constants
+@import "partials/base";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+.no-js {
+	visibility: hidden;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	@include linear-gradient(#fff, #666);
+}
+
+.parallax {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	overflow: hidden;
+	width: 100%;
+	height: 582px;
+}
+
+.parallax-viewport {
+	position: relative; /* relative, absolute, fixed */
+	overflow: hidden;
+}
+
+.parallax-layer {
+	position: absolute;
+}
+
+body, #viewport, section {
+	@include transform3d(translate3d(0, 0, 0));
+}
+
+#viewport {
+	overflow: hidden;
+}
+
+#viewport, #viewport-inner {
+	width: 100%;
+	height: 100%;
+}
+
+#viewport-inner {
+	@include ceaser(easeInOutQuad, all, 350ms);
+}
+
+section {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.csstransforms3d {
+	#viewport {
+		@include perspective(800);
+		@include perspective-origin(50% 50%);
+		
+		&.carousel {
+			@include perspective-origin(50% 100%);
+		}
+
+		#viewport-inner {
+			position: relative;
+			@include experimental(transform-style, preserve-3d);
+		}
+
+		section {
+			position: absolute;
+			@include experimental(transform-style, preserve-3d);
+		}
+		
+		.parallax {
+			@include ceaser(easeInOutQuad, all, 350ms);
+/*			-webkit-box-reflect: below 4px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.75, transparent), to(white));*/
+		}
+	}
+}
+
+.no-csstransforms3d {
+	#viewport {
+		section {
+			float: left;
+		}
+	}
+}

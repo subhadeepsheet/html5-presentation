@@ -1,0 +1,51 @@
+// This file must be imported before loading html5-boilerplate
+@import "compass";
+@import "ceaser-easing";
+
+$legacy-support-for-ie6: false;
+
+$base-font-family: unquote('sans-serif');  // default font-family
+
+$base-font-size: 13px;  // default font-size for YUI fonts
+
+$base-line-height: 1.231;  // default line-height for YUI fonts
+
+$font-color: #444;
+
+$link-color: #1a97e1;
+
+$link-hover-color: #535353;
+
+$selected-font-color: #fff;  // color for selected text
+
+$selected-background-color: #ff5E99;  // bg-color for selected text
+
+$list-left-margin: 2em;  // left margin for ul an ol
+
+@mixin inline-block-zoom {
+	@include inline-block;
+	@if $legacy-support-for-ie7 {
+		zoom: 1;
+	}
+}
+
+@mixin transform-transition($duration, $easing, $moz: $experimental-support-for-mozilla, $webkit: $experimental-support-for-webkit, $o: $experimental-support-for-opera, $ms: $experimental-support-for-microsoft, $khtml: $experimental-support-for-khtml, $official: true) {
+	@if $moz and $experimental-support-for-mozilla {
+		-moz-transition: -moz-transform $duration $easing;
+	}
+	@if $webkit and $experimental-support-for-webkit {
+		-webkit-transition: -webkit-transform $duration $easing;
+	}
+	@if $o and $experimental-support-for-opera {
+		-o-transition: -o-transform $duration $easing;
+	}
+	@if $ms and $experimental-support-for-microsoft {
+		-ms-transition: -ms-transform $duration $easing;
+	}
+	@if $khtml and $experimental-support-for-khtml {
+		-khtml-transition: -khtml-transform $duration $easing;
+	}
+	@if $official {
+		transition: transform $duration $easing;
+	}
+}
