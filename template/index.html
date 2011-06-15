@@ -132,7 +132,34 @@
 				</div>
 			</article>
 			<article class="smaller">
-				<q>HTML5 is being developed as the next major revision of HTML (HyperText Markup Language), the core markup language of the World Wide Web. The Web Hypertext Application Technology Working Group (WHATWG)&hellip;</q>
+				<style>
+					q.fade {
+						position: relative;
+					}
+					
+					q.fade:after {
+						top: 10px;
+						left: -10px;
+						content: "";
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						
+						background-image: -webkit-gradient(
+						    linear,
+						    left top,
+						    left bottom,
+						    color-stop(0, rgba(255, 255, 255, 0)),
+						    color-stop(1, rgb(255, 255, 255))
+						);
+						background-image: -moz-linear-gradient(
+						    left top,
+						    rgb(255, 255, 255) 0%,
+						    rgb(255, 255, 255) 100%
+						);
+					}
+				</style>
+				<q class="fade">HTML5 is being developed as the next major revision of HTML (HyperText Markup Language), the core markup language of the World Wide Web. The Web Hypertext Application Technology Working Group (WHATWG)&hellip;</q>
 				<div class="author">Wikipedia</div>
 			</article>
 			<article class="smaller">
