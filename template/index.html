@@ -317,85 +317,45 @@
 						<li>Edges don't have to be <a>Uniform</a></li>
 					</ul>
 				</section>
-			</article>
-			
-			<article id="rounded-corners-masks">
+				
 				<style>
-					#rounded-corners-masks  ul.cloud li {
-						background:#fff;
-						width:40px;
-						height:50px;
-						position:absolute;
-						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
-					}
-					#rounded-corners-masks .cloud {
-						position:relative;
-						left:300px;
-					}
-					#rounded-corners-masks .cloud li {
-						-webkit-border-radius:100px;
-						background:#fff;
-						width:50px;
-						height:50px;
-						border:1px solid red;
-						display:block;
-						position:absolute;
-						top:0;
-						left:0;
-					}
-					#rounded-corners-masks .cloud li:before {
-						content:"";
-					}
-					#rounded-corners-masks .cloud li:nth-child(1) {
-						-webkit-border-radius:50px;
-						-webkit-border-top-left-radius:0px;
-						-webkit-border-bottom-right-radius:0px;
-						left:30px;
+					@-webkit-keyframes roundup {
+						0% {
+							-webkit-transform: rotate(0deg);
+							border-radius: 0;
+						}
 						
-					}
-					#rounded-corners-masks .cloud li:nth-child(2) {
-						-webkit-border-radius:100px;
-						left:100px;
+						33% {
+							border-radius: 150px;
+							-webkit-transform: rotate(90deg);
+						}
 						
+						66% {
+							border-radius: 150px;
+							border-top-left-radius: 0;
+							border-bottom-right-radius: 0;
+							-webkit-transform: rotate(180deg);
+						}
 					}
-					#rounded-corners-masks .cloud li:nth-child(3) {
-						-webkit-border-radius:100px;
-						left:200px;						
-					}
-					#rounded-corners-masks .circle-mask  {
-						background:url(http://www.indiepubgames.com/mediaLib/images/fast_forward_screen02_680b.jpg) no-repeat;
-						background-size:250px;
-						width:150px;
-						height:150px;
-						border:1px solid #000;
-						-webkit-box-shadow:0px 5px 12px #1D1D1D;
-						display:block;
-						margin-top:20px;
-						-webkit-transsition-property: all;
-						-webkit-transition-duration: 0.8s;
-						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-					}
-					#rounded-corners-masks .circle-mask:hover {
-						-webkit-border-radius:150px;
-					}
-					#rounded-corners-masks .circle-mask:active {
-						-webkit-border-top-left-radius:0px;
-						-webkit-border-bottom-right-radius:0px;
+					
+					#circle-mask {
+						top: 30%;
+						right: 90px;
+						position: absolute;
+						background: url(http://www.indiepubgames.com/mediaLib/images/fast_forward_screen02_680b.jpg) no-repeat;
+						background-size: 250px;
+						width: 150px;
+						height: 150px;
+						border: 1px solid #000;
+						display: block;
+						margin-top: 20px;
+						-webkit-transform: translateZ(0deg);
+						-webkit-backface-visibility: hidden;
+						-webkit-animation: roundup 6s infinite;
+						-webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 					}
 				</style>
-				
-				<h3>Design with Rounded Corners</h3>
-				<!--// Cloud with "pulsing" animation 
-					* recreate using vector art to allow animation / interaction
-					* use as a mask on an image
-				//-->
-				<ul>
-					<li>1. Links to Clip Art made with CSS</li>
-					<li>2. Links to Animated Clip Art</li>
-					<li>3. Mask an image with a rounded edge
-						<span class="circle-mask"></span>
-					</li>
-				</ul>
+				<span id="circle-mask"></span>
 			</article>
 			<article>
 			    
