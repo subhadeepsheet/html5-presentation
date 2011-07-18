@@ -79,7 +79,7 @@
 		<meta charset="utf-8" />
 		<script src="../slides.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/gradients.css"></link>
+		<link rel="stylesheet" type="text/css" href="css/gradients.css" />
 	</head>
 	
 	<style>
@@ -117,8 +117,8 @@
 				<h3>Stuff to talk about:</h3>
 				<ul class="build">
 					<li>What <em>is</em> HTML5?</li>
-					<li>How we want to use it</li>
-					<li>How we can start using it now</li>
+					<li>How do we want to use it?</li>
+					<li>How we can start using it now?</li>
 				</ul>
 			</article>
 			
@@ -132,7 +132,35 @@
 				</div>
 			</article>
 			<article class="smaller">
-				<q>HTML5 is being developed as the next major revision of HTML (HyperText Markup Language), the core markup language of the World Wide Web. The Web Hypertext Application Technology Working Group (WHATWG)&hellip;</q>
+				<style>
+					q.fade {
+						position: relative;
+					}
+					
+					q.fade:after {
+						top: 10px;
+						left: -10px;
+						content: "";
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						pointer-events: none;
+						
+						background-image: -webkit-gradient(
+						    linear,
+						    left top,
+						    left bottom,
+						    color-stop(0, rgba(255, 255, 255, 0)),
+						    color-stop(1, rgb(255, 255, 255))
+						);
+						background-image: -moz-linear-gradient(
+						    left top,
+						    rgb(255, 255, 255) 0%,
+						    rgb(255, 255, 255) 100%
+						);
+					}
+				</style>
+				<q class="fade">HTML5 is being developed as the next major revision of HTML (HyperText Markup Language), the core markup language of the World Wide Web. The Web Hypertext Application Technology Working Group (WHATWG)&hellip;</q>
 				<div class="author">Wikipedia</div>
 			</article>
 			<article class="smaller">
@@ -273,7 +301,7 @@
 				//-->
 				<h3>Rounded Corners</h3>
 				<section>
-					<ul class="build">
+					<ul>
 						<li>Take the edge off your web design</li>
 						<li>With a.... <a>Rounded Button</a></li>
 						<li>
@@ -290,85 +318,45 @@
 						<li>Edges don't have to be <a>Uniform</a></li>
 					</ul>
 				</section>
-			</article>
-			
-			<article id="rounded-corners-masks">
+				
 				<style>
-					#rounded-corners-masks  ul.cloud li {
-						background:#fff;
-						width:40px;
-						height:50px;
-						position:absolute;
-						-webkit-box-shadow: inset 0 8px 20px red, 0px 3px 12px #1D1D1D;
-					}
-					#rounded-corners-masks .cloud {
-						position:relative;
-						left:300px;
-					}
-					#rounded-corners-masks .cloud li {
-						-webkit-border-radius:100px;
-						background:#fff;
-						width:50px;
-						height:50px;
-						border:1px solid red;
-						display:block;
-						position:absolute;
-						top:0;
-						left:0;
-					}
-					#rounded-corners-masks .cloud li:before {
-						content:"";
-					}
-					#rounded-corners-masks .cloud li:nth-child(1) {
-						-webkit-border-radius:50px;
-						-webkit-border-top-left-radius:0px;
-						-webkit-border-bottom-right-radius:0px;
-						left:30px;
+					@-webkit-keyframes roundup {
+						0% {
+							-webkit-transform: rotate(0deg);
+							border-radius: 0;
+						}
 						
-					}
-					#rounded-corners-masks .cloud li:nth-child(2) {
-						-webkit-border-radius:100px;
-						left:100px;
+						33% {
+							border-radius: 150px;
+							-webkit-transform: rotate(90deg);
+						}
 						
+						66% {
+							border-radius: 150px;
+							border-top-left-radius: 0;
+							border-bottom-right-radius: 0;
+							-webkit-transform: rotate(180deg);
+						}
 					}
-					#rounded-corners-masks .cloud li:nth-child(3) {
-						-webkit-border-radius:100px;
-						left:200px;						
-					}
-					#rounded-corners-masks .circle-mask  {
-						background:url(http://www.indiepubgames.com/mediaLib/images/fast_forward_screen02_680b.jpg) no-repeat;
-						background-size:250px;
-						width:150px;
-						height:150px;
-						border:1px solid #000;
-						-webkit-box-shadow:0px 5px 12px #1D1D1D;
-						display:block;
-						margin-top:20px;
-						-webkit-transsition-property: all;
-						-webkit-transition-duration: 0.8s;
-						-webkit-transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-					}
-					#rounded-corners-masks .circle-mask:hover {
-						-webkit-border-radius:150px;
-					}
-					#rounded-corners-masks .circle-mask:active {
-						-webkit-border-top-left-radius:0px;
-						-webkit-border-bottom-right-radius:0px;
+					
+					#circle-mask {
+						top: 30%;
+						right: 90px;
+						position: absolute;
+						background: url(http://www.indiepubgames.com/mediaLib/images/fast_forward_screen02_680b.jpg) no-repeat;
+						background-size: 250px;
+						width: 150px;
+						height: 150px;
+						border: 1px solid #000;
+						display: block;
+						margin-top: 20px;
+						-webkit-transform: translateZ(0deg);
+						-webkit-backface-visibility: hidden;
+						-webkit-animation: roundup 6s infinite;
+						-webkit-animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 					}
 				</style>
-				
-				<h3>Design with Rounded Corners</h3>
-				<!--// Cloud with "pulsing" animation 
-					* recreate using vector art to allow animation / interaction
-					* use as a mask on an image
-				//-->
-				<ul>
-					<li>1. Links to Clip Art made with CSS</li>
-					<li>2. Links to Animated Clip Art</li>
-					<li>3. Mask an image with a rounded edge
-						<span class="circle-mask"></span>
-					</li>
-				</ul>
+				<span id="circle-mask"></span>
 			</article>
 			<article>
 			    
@@ -522,38 +510,50 @@
 			<article>
 				<h3>Responsive Web</h3>
 				<ul class="build">
-					<li>What?</li>
-					<li style="font-size:.667em;padding-left:10px;line-height:1em;">
+					<!-- <li>What?</li> -->
+					<!-- <li style="font-size:.667em;padding-left:10px;line-height:1em;">
 						The approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.
+					</li> -->
+					<li>
+						Benefits
+						<article class="smaller">
+							<ul class="build">
+								<li>Better user experience</li>
+								<li>It's only 1 site!, No need to develop multiple versions for different devices</li>
+								<li>Easy to maintain and develop, it's pure CSS!</li>
+							</ul>
+						</article>
 					</li>
-					<li>Why?</li>
-					<ul class="build">
-						<li style="font-size:.667em;padding-left:10px;line-height:.667em;">Better user experience</li>
-						<li style="font-size:.667em;padding-left:10px;line-height:.667em;">It's only 1 site!, No need to develop multiple versions for different devices</li>
-						<li style="font-size:.667em;padding-left:10px;line-height:.667em;">Easy to maintain and develop, it's pure CSS!</li>
-					</ul>
-					<li>How?</li>
-					<li style="font-size:.667em;padding-left:10px;line-height:.667em;">Proportionally size everything</li>
-					<ul style="font-size:.667em;">
-						<li style="font-size:.917em;padding-left:10px;line-height:.917em;">Grid/layout</li>
-						<li style="font-size:.917em;padding-left:10px;line-height:.917em;">Images</li>
-						<li style="font-size:.917em;padding-left:10px;line-height:.917em;">Font Size</li> 
-					</ul>
+					<li>
+						How?
+						<article class="smaller">
+							<ul class="build">
+								<li>Proportionally size everything</li>
+								<li>
+									<ul>
+										<li>Grid/layout</li>
+										<li>Images</li>
+										<li>Font Size</li> 
+									</ul>
+								</li>
+							</ul>
+						</article>
+					</li>
 				</ul>
 			</article>
-			<article class="demo">
+			<article class="smaller">
 				<h3>Demos</h3>
-				<ul style="margin:10px 0 20px 20px;">
-					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="../demos/responsive-web-design/base.html" title="Mine" target="_blank">Mine :)</a></li>
-					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="../demos/responsive-web-design/example.html" title="Fit text" target="_blank">Fit-text</a></li>
-					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://mediaqueri.es/" title="Another" target="_blank">Lots More</a></li>
+				<ul>
+					<li><a href="../demos/responsive-web-design/base.html" title="Mine" target="_blank">Mine :)</a></li>
+					<li><a href="../demos/responsive-web-design/example.html" title="Fit text" target="_blank">Fit-text</a></li>
+					<li><a href="http://mediaqueri.es/" title="Another" target="_blank">Lots More</a></li>
 				</ul>
-				<h3>Resources</h3>
+				<h3 style="margin: 1em 0;">Resources</h3>
 				<ul style="margin-top:10px;">
-					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://www.alistapart.com/articles/responsive-web-design/" title="A list apart" target="_blank">A List Apart</a></li>
-					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" title="Smashing Magazine" target="_blank">Smashing</a></li>
-					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://sixrevisions.com/web_design/understanding-the-elements-of-responsive-web-design/" title="Smashing Magazine" target="_blank">Six Revisions</a></li>
-					<li style="font-size:.667em;padding-left:10px;line-height:1em;"><a href="http://blog.bloop.co/the-practicalities-of-css-media-queries-lesso" title="A 'lessons learned' blog" target="_blank">A 'lessons learned' blog</a></li>
+					<li><a href="http://www.alistapart.com/articles/responsive-web-design/" title="A list apart" target="_blank">A List Apart</a></li>
+					<li><a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" title="Smashing Magazine" target="_blank">Smashing</a></li>
+					<li><a href="http://sixrevisions.com/web_design/understanding-the-elements-of-responsive-web-design/" title="Smashing Magazine" target="_blank">Six Revisions</a></li>
+					<li><a href="http://blog.bloop.co/the-practicalities-of-css-media-queries-lesso" title="A 'lessons learned' blog" target="_blank">A 'lessons learned' blog</a></li>
 				</ul>
 				
 			</article>
@@ -839,7 +839,7 @@
 					}
 				</style>
 				
-				<ul class="logos">
+				<ul class="logos" style="width: 600px;">
 					<li>
 						<img src="images/html5-features/HTML5_Semantics_128.png" width="128" height="128" alt="HTML5 Semantics 128" />
 						HTML5
@@ -915,7 +915,7 @@
 				</ul>
 			</article>
 			<article>
-				<h3>Or rather, these <em>do</em> (what a twist!):</h3>
+				<h3>Or rather, these <em>do</em>:</h3>
 
 				<ul class="logos">
 					<li>
@@ -945,7 +945,7 @@
 				</ul>
 			</article>
 			
-			<article>
+			<!-- <article>
 				<h1>The Part Where<br />You Come In</h1>
 			</article>
 			<article>
@@ -960,7 +960,7 @@
 			</article>
 			<article>
 				<h2>Please use HTML5.</h2>
-			</article>
+			</article> -->
 			
 			<article>
 				<h3>
