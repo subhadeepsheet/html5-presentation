@@ -559,9 +559,32 @@
 					<span class="chunk"> mollit anim id est laborum.</span>
 				</p>
 				<script>
-					$("#textstyle").change(function () {
-						$("#lorem").attr("class", $(this).val());
-					});
+					(function () {
+						var parent = $("#fontdemo"),
+						    select = $("#textstyle"),
+						    options = select.find("option"),
+						    selectedIndex;
+						
+						$(document).bind("keydown", function (e) {
+							if (parent.hasClass("current")) {
+								selectedIndex = options.eq(select[0].selectedIndex);
+
+								switch (e.keyCode) {
+								case 74 :
+									select.val(selectedIndex.prev().attr("value")).trigger("change");
+									break;
+								
+								case 75 :
+									select.val(selectedIndex.next().attr("value")).trigger("change");
+									break;
+								}
+							}
+						});
+
+						select.change(function () {
+							$("#lorem").attr("class", $(this).val());
+						});
+					}());
 				</script>
 			</article>
 			
