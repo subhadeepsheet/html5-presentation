@@ -564,21 +564,55 @@
 						var parent = $("#fontdemo"),
 						    select = $("#textstyle"),
 						    options = select.find("option"),
-						    selectedIndex;
+						    selectedIndex, prev, next;
 						
-						$(document).bind("keydown", function (e) {
+						$(document.body).bind("keydown", function (e) {
 							if (parent.hasClass("current")) {
 								selectedIndex = options.eq(select[0].selectedIndex);
 
-								switch (e.keyCode) {
-								case 74 :
-									select.val(selectedIndex.prev().attr("value")).trigger("change");
-									break;
-								
-								case 75 :
-									select.val(selectedIndex.next().attr("value")).trigger("change");
-									break;
+								switch (event.keyCode) {
+									case 39: // right arrow
+									case 13: // Enter
+									case 32: // space
+									case 34: // PgDn
+										next = selectedIndex.next();
+
+										if (next.get(0)) {
+											select.val(next.attr("value")).trigger("change");
+											e.stopPropagation();
+										}
+										break;
+
+									case 37: // left arrow
+									case 8: // Backspace
+									case 33: // PgUp
+										prev = selectedIndex.prev();
+										
+										if (prev.get(0)) {
+											select.val(prev.attr("value")).trigger("change");
+											e.stopPropagation();
+										}
+										break;
+
+									case 40: // down arrow
+										next = selectedIndex.next();
+										
+										if (next.get(0)) {
+											select.val(next.attr("value")).trigger("change");
+											e.stopPropagation();
+										}
+										break;
+
+									case 38: // up arrow
+										prev = selectedIndex.prev();
+										
+										if (prev.get(0)) {
+											select.val(prev.attr("value")).trigger("change");
+											e.stopPropagation();
+										}
+										break;
 								}
+
 							}
 						});
 
