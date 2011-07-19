@@ -564,21 +564,55 @@
 						var parent = $("#fontdemo"),
 						    select = $("#textstyle"),
 						    options = select.find("option"),
-						    selectedIndex;
+						    selectedIndex, prev, next;
 						
-						$(document).bind("keydown", function (e) {
+						$(document.body).bind("keydown", function (e) {
 							if (parent.hasClass("current")) {
 								selectedIndex = options.eq(select[0].selectedIndex);
 
-								switch (e.keyCode) {
-								case 74 :
-									select.val(selectedIndex.prev().attr("value")).trigger("change");
-									break;
-								
-								case 75 :
-									select.val(selectedIndex.next().attr("value")).trigger("change");
-									break;
+								switch (event.keyCode) {
+									case 39: // right arrow
+									case 13: // Enter
+									case 32: // space
+									case 34: // PgDn
+										next = selectedIndex.next();
+
+										if (next.get(0)) {
+											select.val(next.attr("value")).trigger("change");
+											e.stopPropagation();
+										}
+										break;
+
+									case 37: // left arrow
+									case 8: // Backspace
+									case 33: // PgUp
+										prev = selectedIndex.prev();
+										
+										if (prev.get(0)) {
+											select.val(prev.attr("value")).trigger("change");
+											e.stopPropagation();
+										}
+										break;
+
+									case 40: // down arrow
+										next = selectedIndex.next();
+										
+										if (next.get(0)) {
+											select.val(next.attr("value")).trigger("change");
+											e.stopPropagation();
+										}
+										break;
+
+									case 38: // up arrow
+										prev = selectedIndex.prev();
+										
+										if (prev.get(0)) {
+											select.val(prev.attr("value")).trigger("change");
+											e.stopPropagation();
+										}
+										break;
 								}
+
 							}
 						});
 
@@ -657,6 +691,9 @@
 				</script>
 			</article>
 
+			<article>
+				<h2>CSS Animations &amp; Transforms</h2>
+			</article>
 			<article class="demo">
 			    
 			    <style>
@@ -756,7 +793,7 @@
 				
 			</article>
 			<article>
-				<h3>CSS transitions, animations &amp; 3d transforms</h3>
+				<h3>3D Transforms</h3>
 				
 				<ul>
 					<li><a target="_blank" href="demo/carousel/cube-transition.html">Star Cube</a></li>
@@ -1000,8 +1037,11 @@
 					</li>
 				</ul>
 			</article>
-			<article>
-				<h3>These don&rsquo;t:</h3>
+			<article id="unsupported">
+				<hgroup>
+					<h3>These don&rsquo;t:</h3>
+					<h3>Or rather, these <em>do</em>:</h3>
+				</hgroup>
 				
 				<ul class="logos">
 					<li>
@@ -1017,28 +1057,69 @@
 						IE 6
 					</li>
 				</ul>
-			</article>
-			<article>
-				<h3>Or rather, these <em>do</em>:</h3>
 
-				<ul class="logos">
-					<li>
-						<img src="images/ie8.png" alt="IE8" />
-						IE 8
-					</li>
-					<li>
-						<img src="images/ie7.png" alt="IE7" />
-						IE 7
-					</li>
-					<li>
-						<img src="images/ie6.png" alt="IE6" />
-						IE 6
-					</li>
-				</ul>
-				
-				<ul class="build">
-					<li>How?</li>
-				</ul>
+				<script>
+					(function () {
+						var parent = $("#unsupported"),
+						    options = parent.find("hgroup h3").hide(),
+						    selectedIndex = options.eq(0).show(),
+						    prev, next;
+						
+						$(document.body).bind("keydown", function (e) {
+							if (parent.hasClass("current")) {
+								switch (event.keyCode) {
+									case 39: // right arrow
+									case 13: // Enter
+									case 32: // space
+									case 34: // PgDn
+										selectedIndex = selectedIndex.next();
+										console.log(selectedIndex.get(0));
+
+										if (selectedIndex.get(0)) {
+											options.hide();
+											selectedIndex.show();
+											e.stopPropagation();
+										}
+										break;
+
+									case 37: // left arrow
+									case 8: // Backspace
+									case 33: // PgUp
+										selectedIndex = selectedIndex.prev();
+										
+										if (selectedIndex.get(0)) {
+											options.hide();
+											selectedIndex.show();
+											e.stopPropagation();
+										}
+										break;
+
+									case 40: // down arrow
+										selectedIndex = selectedIndex.next();
+
+										if (selectedIndex.get(0)) {
+											options.hide();
+											selectedIndex.show();
+											e.stopPropagation();
+										}
+										break;
+
+									case 38: // up arrow
+										selectedIndex = selectedIndex.prev();
+										
+										if (selectedIndex.get(0)) {
+											options.hide();
+											selectedIndex.show();
+											e.stopPropagation();
+										}
+										break;
+								}
+
+							}
+						});
+					}());
+				</script>
+
 			</article>
 			<article>
 				<h3>Google Chrome Frame</h3>
