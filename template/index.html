@@ -440,6 +440,7 @@
 							<li>
 								<div class="source"><em style="color: #c00;">*</em> Type foundries permitting</div>
 								Some type foundries think the future stinks, explicity forbidding any sort of &ldquo;webfont&rdquo; licensing. Hoefler &amp; Frere-Jones, creators of the hugely popular &rsquo;Gotham&lsquo; family, are <a href="http://www.typography.com/ask/faq.php?faqID=15#Faq_15" target="new">notorious for this</a>.
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -522,6 +523,16 @@
 					</tr>
 				</table>
 			</article>
+			<article>
+				<h3>So, now what?</h3>
+				<p>Fortunately some smart folks are working to sort out the icky licensing and compatibility issues.</p>
+				<ul class="build">
+					<li>TypeKit</li>
+					<li>Fontdeck</li>
+					<li>Google Fonts</li>
+					<li>Font Squirrel</li>
+				</ul>
+			</article>
 			<article id="fontdemo" class="demo">
 				<link rel="stylesheet" href="../webfonts.css" />
 				<h3>@font-face + text-shadow</h3>
@@ -549,9 +560,32 @@
 					<span class="chunk"> mollit anim id est laborum.</span>
 				</p>
 				<script>
-					$("#textstyle").change(function () {
-						$("#lorem").attr("class", $(this).val());
-					});
+					(function () {
+						var parent = $("#fontdemo"),
+						    select = $("#textstyle"),
+						    options = select.find("option"),
+						    selectedIndex;
+						
+						$(document).bind("keydown", function (e) {
+							if (parent.hasClass("current")) {
+								selectedIndex = options.eq(select[0].selectedIndex);
+
+								switch (e.keyCode) {
+								case 74 :
+									select.val(selectedIndex.prev().attr("value")).trigger("change");
+									break;
+								
+								case 75 :
+									select.val(selectedIndex.next().attr("value")).trigger("change");
+									break;
+								}
+							}
+						});
+
+						select.change(function () {
+							$("#lorem").attr("class", $(this).val());
+						});
+					}());
 				</script>
 			</article>
 			
@@ -580,13 +614,9 @@
 						<article class="smaller">
 							<ul class="build">
 								<li>Proportionally size everything</li>
-								<li>
-									<ul>
-										<li>Grid/layout</li>
-										<li>Images</li>
-										<li>Font Size</li> 
-									</ul>
-								</li>
+								<li>Grid/layout</li>
+								<li>Images</li>
+								<li>Font Size</li> 
 							</ul>
 						</article>
 					</li>
@@ -729,7 +759,7 @@
 				</ul>
 			</article>
 			
-			<article>
+			<!-- <article>
 				<h1>The Under-the-hood Goods</h1>
 			</article>
 			
@@ -760,7 +790,7 @@
 						<li>Flux Capacitors</li>
 					</ul>
 				</div>
-			</article>
+			</article> -->
 			
 			<article>
 				<h1>The Catch</h1>
@@ -833,22 +863,27 @@
 				</ul>
 			</article>
 			<article>
-				<h3>Do:</h3>
-				<ul>
-					<li>Use advanced techniques</li>
-					<li>Degrade gracefully</li>
-					<li>Be okay with degradation</li>
-					<li>This means you, designer!</li>
-				</ul>
-			</article>
-			<article>
-				<h3>Don&rsquo;t:</h3>
-				<ul>
-					<li>Worry (be happy)</li>
-					<li>Provide overly-complicated fallbacks</li>
-					<li>Over-emphasize this point. Make it status quo. We&rsquo;ll buy you beers.*</li>
-				</ul>
-				<em style="padding: 0 0 0 20px; font-size: 0.5em;">* or whiskey or wine or tea</em>
+				<style>
+					.column {
+						float: left;
+						width: 50%;
+					}
+				</style>
+				
+				<div class="column">
+					<ul>
+						<li>Use advanced techniques</li>
+						<li>Degrade gracefully</li>
+					</ul>
+				</div>
+				
+				<div class="column">
+					<ul>
+						<li>Don't worry (be happy)</li>
+						<li>Don't over-emphasize degradability. Make it status quo.</li>
+						<li>Don't promise next generation features in old generation browsers</li>
+					</ul>
+				</div>
 			</article>
 			<article>
 				<h2>The web evolves. We should too.</h2>
