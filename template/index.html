@@ -594,25 +594,27 @@
 			</article>
 			<article>
 				<h3>Responsive Web</h3>
-				<ul class="build">
-					<!-- <li>What?</li> -->
-					<!-- <li style="font-size:.667em;padding-left:10px;line-height:1em;">
-						The approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.
-					</li> -->
+				<ul>
 					<li>
 						Benefits
 						<article class="smaller">
-							<ul class="build">
+							<ul>
 								<li>Better user experience</li>
 								<li>It's only 1 site!, No need to develop multiple versions for different devices</li>
 								<li>Easy to maintain and develop, it's pure CSS!</li>
 							</ul>
 						</article>
 					</li>
+				</ul>
+				<ul class="build" style="margin-top: 0;">
+					<!-- <li>What?</li> -->
+					<!-- <li style="font-size:.667em;padding-left:10px;line-height:1em;">
+						The approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.
+					</li> -->
 					<li>
 						How?
 						<article class="smaller">
-							<ul class="build">
+							<ul>
 								<li>Proportionally size everything</li>
 								<li>Grid/layout</li>
 								<li>Images</li>
@@ -621,6 +623,8 @@
 						</article>
 					</li>
 				</ul>
+
+				<img src="images/responsive-example.png" style="position: absolute; bottom: 110px; right: 10px;" alt="" />
 			</article>
 			<article class="smaller">
 				<h3>Demos</h3>
@@ -631,12 +635,26 @@
 				</ul>
 				<h3 style="margin: 1em 0;">Resources</h3>
 				<ul style="margin-top:10px;">
-					<li><a href="http://www.alistapart.com/articles/responsive-web-design/" title="A list apart" target="_blank">A List Apart</a></li>
-					<li><a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" title="Smashing Magazine" target="_blank">Smashing</a></li>
 					<li><a href="http://sixrevisions.com/web_design/understanding-the-elements-of-responsive-web-design/" title="Smashing Magazine" target="_blank">Six Revisions</a></li>
 					<li><a href="http://blog.bloop.co/the-practicalities-of-css-media-queries-lesso" title="A 'lessons learned' blog" target="_blank">A 'lessons learned' blog</a></li>
+					<li><a href="http://www.alistapart.com/articles/responsive-web-design/" title="A list apart" target="_blank">A List Apart</a></li>
+					<li><a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" title="Smashing Magazine" target="_blank">Smashing</a></li>
 				</ul>
+
+				<img src="images/responsive-example-4.png" style="max-width: 60%; position: absolute; bottom: 450px; right: 10px;" alt="" />
+				<img src="images/responsive-example-3.png" style="max-width: 60%; position: absolute; bottom: 280px; right: 10px;" alt="" />
+				<img src="images/responsive-example-2.png" style="max-width: 60%; position: absolute; bottom: 110px; right: 10px;" alt="" />
 				
+				<script>
+					(function () {
+						$("a[title='Mine']").click(function (e) {
+							window.open('../demos/responsive-web-design/base.html', null, 'width=1200,scrollbar=1,toolbar=1');
+							window.open('../demos/responsive-web-design/base.html', null, 'width=980,scrollbar=1,toolbar=1');
+							window.open('../demos/responsive-web-design/base.html', null, 'width=500,scrollbar=1,toolbar=1');
+							e.preventDefault();
+						});
+					}());
+				</script>
 			</article>
 
 			<article class="demo">
