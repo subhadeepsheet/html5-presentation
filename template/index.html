@@ -526,11 +526,11 @@
 			<article>
 				<h3>So, now what?</h3>
 				<p>Fortunately some smart folks are working to sort out the icky licensing and compatibility issues.</p>
-				<ul class="build">
-					<li>TypeKit</li>
-					<li>Fontdeck</li>
-					<li>Google Fonts</li>
-					<li>Font Squirrel</li>
+				<ul>
+					<li><a href="http://typekit.com/" target="_blank">TypeKit</a></li>
+					<li><a href="http://fontdeck.com/" target="_blank">Fontdeck</a></li>
+					<li><a href="http://www.google.com/webfonts" target="_blank">Google Fonts</a></li>
+					<li><a href="http://www.fontsquirrel.com/" target="_blank">Font Squirrel</a></li>
 				</ul>
 			</article>
 			<article id="fontdemo" class="demo">
@@ -594,25 +594,27 @@
 			</article>
 			<article>
 				<h3>Responsive Web</h3>
-				<ul class="build">
-					<!-- <li>What?</li> -->
-					<!-- <li style="font-size:.667em;padding-left:10px;line-height:1em;">
-						The approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.
-					</li> -->
+				<ul>
 					<li>
 						Benefits
 						<article class="smaller">
-							<ul class="build">
+							<ul>
 								<li>Better user experience</li>
 								<li>It's only 1 site!, No need to develop multiple versions for different devices</li>
 								<li>Easy to maintain and develop, it's pure CSS!</li>
 							</ul>
 						</article>
 					</li>
+				</ul>
+				<ul class="build" style="margin-top: 0;">
+					<!-- <li>What?</li> -->
+					<!-- <li style="font-size:.667em;padding-left:10px;line-height:1em;">
+						The approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.
+					</li> -->
 					<li>
 						How?
 						<article class="smaller">
-							<ul class="build">
+							<ul>
 								<li>Proportionally size everything</li>
 								<li>Grid/layout</li>
 								<li>Images</li>
@@ -621,6 +623,8 @@
 						</article>
 					</li>
 				</ul>
+
+				<img src="images/responsive-example.png" style="position: absolute; bottom: 110px; right: 10px;" alt="" />
 			</article>
 			<article class="smaller">
 				<h3>Demos</h3>
@@ -631,12 +635,26 @@
 				</ul>
 				<h3 style="margin: 1em 0;">Resources</h3>
 				<ul style="margin-top:10px;">
-					<li><a href="http://www.alistapart.com/articles/responsive-web-design/" title="A list apart" target="_blank">A List Apart</a></li>
-					<li><a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" title="Smashing Magazine" target="_blank">Smashing</a></li>
 					<li><a href="http://sixrevisions.com/web_design/understanding-the-elements-of-responsive-web-design/" title="Smashing Magazine" target="_blank">Six Revisions</a></li>
 					<li><a href="http://blog.bloop.co/the-practicalities-of-css-media-queries-lesso" title="A 'lessons learned' blog" target="_blank">A 'lessons learned' blog</a></li>
+					<li><a href="http://www.alistapart.com/articles/responsive-web-design/" title="A list apart" target="_blank">A List Apart</a></li>
+					<li><a href="http://coding.smashingmagazine.com/2011/01/12/guidelines-for-responsive-web-design/" title="Smashing Magazine" target="_blank">Smashing</a></li>
 				</ul>
+
+				<img src="images/responsive-example-4.png" style="max-width: 60%; position: absolute; bottom: 450px; right: 10px;" alt="" />
+				<img src="images/responsive-example-3.png" style="max-width: 60%; position: absolute; bottom: 280px; right: 10px;" alt="" />
+				<img src="images/responsive-example-2.png" style="max-width: 60%; position: absolute; bottom: 110px; right: 10px;" alt="" />
 				
+				<script>
+					(function () {
+						$("a[title='Mine']").click(function (e) {
+							window.open('../demos/responsive-web-design/base.html', null, 'width=1200,scrollbar=1,toolbar=1');
+							window.open('../demos/responsive-web-design/base.html', null, 'width=980,scrollbar=1,toolbar=1');
+							window.open('../demos/responsive-web-design/base.html', null, 'width=500,scrollbar=1,toolbar=1');
+							e.preventDefault();
+						});
+					}());
+				</script>
 			</article>
 
 			<article class="demo">
@@ -742,7 +760,7 @@
 				
 				<ul>
 					<li><a target="_blank" href="demo/carousel/cube-transition.html">Star Cube</a></li>
-					<li><a target="_blank" href="demo/carousel/3d-carousel-transition.html">War Carousel</a></li>
+					<li><a target="_blank" href="demo/carousel/3d-carousel-transition.html">Star Carousel</a></li>
 				</ul>
 			</article>
 			
@@ -752,9 +770,9 @@
 			<article>
 				<h3>Canvas/WebGL</h3>
 				<ul>
-					<li><a href="http://people.opera.com/danield/html5/html5logo/" onclick="window.open('http://inception.davepedu.com/noflash.php');" target="_blank">HTML5 Logo <em>&mdash; in HTML5!</em></a></li>
+					<li><a href="http://people.opera.com/danield/html5/html5logo/" target="_blank">HTML5 Logo <em>&mdash; in HTML5!</em></a></li>
 					<li><a href="http://html5demos.com/canvas-grad">Interactive Gradients</a></li>
-					<li><a href="http://www.cs.helsinki.fi/u/ilmarihe/metatunnel.html">Metatunnel</a></li>
+					<!-- <li><a href="http://www.cs.helsinki.fi/u/ilmarihe/metatunnel.html">Metatunnel</a></li> -->
 					<li><a href="http://www.ro.me/">ROME - 3 Dreams of Black</a></li>
 				</ul>
 			</article>
@@ -1034,22 +1052,21 @@
 				<h3>Current projects using Chrome Frame</h3>
 				<img style="display: block; margin-top: 1em;" src="images/chrome-frame-projects.png" alt="" />
 			</article>
-			<!-- <article>
-				<h1>The Part Where<br />You Come In</h1>
-			</article>
+
 			<article>
-				<h3>Usage is possible with creative support.</h3>
-				<ul>
-					<li>We suck at design.</li>
-					<li>No, seriously. Suckage.</li>
+				<h2>This is where we abruptly end our presentation</h2>
+			</article>
+
+			<article>
+				<h3>Takeaways</h3>
+
+				<ul class="build">
+					<li>We can do a lot with HTML5 <em>now</em></li>
+					<li>Some considerations when using HTML5. Ask your friendly front-end developer</li>
+					<li>Google Chrome Frame FTW</li>
+					<li>Let's move RED forward</li>
 				</ul>
 			</article>
-			<article>
-				<h2>You complete <strike>me</strike> us</h2>
-			</article>
-			<article>
-				<h2>Please use HTML5.</h2>
-			</article> -->
 			
 			<article>
 				<h3>
@@ -1063,7 +1080,7 @@
 					<li>Richard Herrera</li>
 					<li>Taka Kojima</li>
 					<li>Scott Twede</li>
-					<li>Slides: <a href="#">ff0000.github.com/html5-presentation/</a></li>
+					<li>Slides: <a href="#">ff0000.github.com/html5-presentation/template</a></li>
 				</ul>
 
 			</article>
